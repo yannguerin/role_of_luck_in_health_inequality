@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <title>Simulation Results</title>
+</head>
+
+<body>
+
+    <h1>Simulation Results</h1>
+
+    <div id="mortality-plot-div">
+        {{ mortality_plot }}
+    </div>
+
+    <div id="lorenz-curve-dead-included-div">
+        {{ lorenz_curve_plot_dead_included }}
+    </div>
+
+    <div id="lorenz-curve-alive-only-div">
+        {{ lorenz_curve_plot_alive_only }}
+    </div>
+
+    <div id="cross-sectional-lorenz-dead-included-div">
+        {{ cross_sectional_lorenz_dead_included }}
+    </div>
+
+    <div id="cross-sectional-lorenz-alive-only-div">
+        {{ cross_sectional_lorenz_alive_only }}
+    </div>
+
+    <div id="cross-sectional-health-scores-div">
+        {{ cross_sectional_health_scores }}
+    </div>
+
+    <div id="health-scores-age-80-div">
+        {{ health_scores_age_80['20'] }}
+    </div>
+
+    <div id="health-scores-age-80-div">
+        {{ health_scores_age_80['40'] }}
+    </div>
+
+    <div id="health-scores-age-80-div">
+        {{ health_scores_age_80['60'] }}
+    </div>
+
+    <div id="health-scores-age-80-div">
+        {{ health_scores_age_80['80'] }}
+    </div>
+
+    <div id="health-scores-over-time-div">
+        {{ distribution_of_health_scores_over_time }}
+    </div>
+
+    <div id="prop-death-by-ha-div">
+        {{ proportion_of_deaths_by_health_ability }}
+    </div>
+
+    <div id="prop-death-by-c-div">
+        {{ proportion_of_deaths_by_circumstance_score }}
+    </div>
+
+</body>
+
+</html>

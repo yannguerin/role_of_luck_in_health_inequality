@@ -1,0 +1,9 @@
+measure,location,sex,age,cause,metric,year,val,upper,lower
+Deaths,Canada,Both,All ages,Unintentional injuries,Percent,2019,0.034703388007220885,0.03720734116554356,0.030092944888851492
+Deaths,Canada,Both,All ages,Total cancers,Percent,2019,0.3141039571730347,0.3308081420243284,0.28752986105490724
+Deaths,Canada,Both,All ages,All causes,Percent,2019,1.0,1.0,1.0
+Deaths,Canada,Both,All ages,Cardiovascular diseases,Percent,2019,0.271905086649722,0.2911052608727048,0.23653990030267713
+Deaths,Canada,Both,All ages,Ischemic heart disease,Percent,2019,0.14906500321877267,0.1590973947440461,0.1314628735561272
+Deaths,Canada,Both,All ages,Transport injuries,Percent,2019,0.008051953535302123,0.008410744806343542,0.007682033254879168
+Deaths,Canada,Both,All ages,Alzheimer's disease and other dementias,Percent,2019,0.06377584471132527,0.16093938136249958,0.016905827522795073
+Deaths,Canada,Both,All ages,Diabetes mellitus,Percent,2019,0.023181231134661428,0.025084827731926565,0.020771748413385565

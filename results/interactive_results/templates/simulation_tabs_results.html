@@ -1,0 +1,252 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        #mortality-plot-div {
+            padding: 5%;
+        }
+
+        .sim-plots-grid {
+            display: grid;
+            column-gap: 2%;
+            row-gap: 2%
+        }
+
+        .number-of-health-shocks-vs-age-of-death {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .distribution-of-scores {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .mortality-by-c {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .mortality-by-e {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .shock-magnitudes {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .age-of-health-shock {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .individuals-over-time {
+            grid-row-start: 4;
+            grid-row-end: 5;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <title>Simulation Results</title>
+    <script>
+        function openCity(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Simulation Results</h1>
+
+    <div class="tab">
+        {% for sim_num in sim_nums %}
+        <button class="tablinks" onclick="openCity(event, '{{sim_num}}')">{{sim_num}}</button>
+        {% endfor %}
+        <button class="tablinks" onclick="openCity(event, 'information')">Information</button>
+    </div>
+
+    <!-- Tab content -->
+    {% for sim_num in sim_nums %}
+    <div id="{{sim_num}}" class="tabcontent">
+        <h3>{{ sim_plots[sim_num]["title"] }} </h3>
+
+        <p> {{ sim_plots[sim_num]["explanation"] }} </p>
+
+        <div class="sim-plots-grid">
+            <div class="number-of-health-shocks-vs-age-of-death">{{
+                sim_plots[sim_num]["number_of_health_shocks_vs_age_of_death"] }}</div>
+
+            <div class="distribution-of-scores">{{ sim_plots[sim_num]["distribution_of_scores"] }}</div>
+
+            <div class="mortality-by-c">{{ sim_plots[sim_num]["mortality_by_c"] }}</div>
+
+            <div class="mortality-by-e">{{ sim_plots[sim_num]["mortality_by_e"] }}</div>
+
+            <div class="age-of-health-shock">{{ sim_plots[sim_num]["age_of_health_shock"] }}</div>
+
+            <div class="shock-magnitudes">{{ sim_plots[sim_num]["shock_magnitudes"] }}</div>
+
+            <div class="individuals-over-time"> {{sim_plots[sim_num]["individuals_over_time"]}} </div>
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+    <div id="information" class="tabcontent">
+        <h2>Extra Information</h2>
+
+        <h3>Notes on some plots</h3>
+
+        <h4>Health Scores over time for sample of Individuals</h4>
+
+        <p>The dashed vertical lines represent encountered shocks. The solid vertical lines represent taken shocks.</p>
+
+        <p>The light grey solid line represents the health score over time when no shock is taken. Though it flattens
+            when the individual dies.</p>
+
+        <p>If the background color of an individuals plot is light grey that means the individual died before the end of
+            the simulation.</p>
+
+        <p>You may notice that some of these plots do not contain a legend label for all shock causes.
+            This is because those legend labels only show up if an individual in the sample took a shock of that cause.
+        </p>
+
+        <h3>Implementation of Simulation Options</h3>
+
+        <h4>Equal Effort</h4>
+
+        <p>The simple mean of all effort scores in the population</p>
+
+        <h4>Equal Circumstance</h4>
+
+        <p>The simple mean of all circumstance scores in the population</p>
+
+        <h4>Unequal Health Score at entry</h4>
+
+        <p>0.5 + (circumstance values / 2)</p>
+
+        <h4>Slightly Unequal Health Score at entry</h4>
+
+        <p>0.99 + (circumstance values / 100)</p>
+
+        <h4>Uniform Random Probability of taking a Shock</h4>
+
+        <p>P(0.5): Probability of taking a shock is equal to 0.5 for all agents.</p>
+
+        <h4>Deterministic Shocks</h4>
+
+        <p>For each step in the deterministic shocks: L-encounter, L-take, and L-magnitude - the population is sorted by
+            the health score. </p>
+
+        <p>The number of agents who encounter a shock is equal to the percent of the susceptible population according to
+            the cause specific prevalence rate for the age group at the current time of the simulation. </p>
+
+        <p>The number of agents who take a shock is equal to (1 - mean health ability) * the number of encountered
+            shocks.</p>
+
+        <p>The shock magnitude applied to the agents who encountered a shock is sampled uniformly from the disability
+            weights for that shock cause, then sorted from high to low, and the highest shock magnitudes are applied to
+            the agents with the lowest health scores.</p>
+
+        <h4>Base Model Shocks (default)</h4>
+
+        <p>Each agent in the susceptible population has a P(prevalence rate) chance of encountering a shock</p>
+
+        <p>Each agent in that encountered a shock has a P(health ability) chance of taking that shock</p>
+
+        <p>Each agent that has taken a shock receives a health score deduction from a uniform sample of the disability
+            weights for that shock cause</p>
+
+        <h4>Shock Probability Conditional on Health Ability</h4>
+
+        <p>The health ability values are first centered around zero.
+            Then, for each individual, take the inverse of the centered health ability values and multiply by the shock
+            probability.
+            Then, apply a sigmoid function to those shock probability values.
+            Then, each individual encounters the shock based on the Monte Carlo Hazard function applied to the shock
+            probability values.
+        </p>
+
+    </div>
+</body>
+
+</html>

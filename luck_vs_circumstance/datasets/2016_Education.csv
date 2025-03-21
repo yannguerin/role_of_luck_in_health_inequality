@@ -1,0 +1,61 @@
+﻿"Highest level of education by census year: Canada, provinces and territories, census metropolitan areas and census agglomerations 1 2",
+Frequency: Occasional,
+Table: 98-10-0384-01,
+Release date: 2022-12-09,
+"Geography: Canada, Province or territory, Census metropolitan area, Census agglomeration",
+"Universe: Population aged 15 years and over in private households, 2021 Census — 25% Sample data",
+"Variable List: Highest certificate, diploma or degree (15), Age (15A), Gender (3a), Statistics (2A), Census year (4)",
+,
+Geography,Canada i1
+Statistics (2A),(%) distribution
+Age (15A) 3,Total - Age
+Gender (3a) 4 5,Total - Gender
+Census year (4),2016
+"Highest certificate, diploma or degree (15) 6",
+"Total - Highest certificate, diploma or degree 7",100
+"No certificate, diploma or degree",18.3
+High (secondary) school diploma or equivalency certificate 8,26.5
+"Postsecondary certificate, diploma or degree",55.3
+Apprenticeship or trades certificate or diploma,9.8
+Non-apprenticeship trades certificate or diploma 9,5.4
+Apprenticeship certificate 10,4.4
+"College, CEGEP or other non-university certificate or diploma 11",19.4
+University certificate or diploma below bachelor level,2.8
+Bachelor’s degree or higher,23.3
+Bachelor's degree,15.5
+University certificate or diploma above bachelor level,1.6
+"Degree in medicine, dentistry, veterinary medicine or optometry",0.7
+Master's degree,4.6
+Earned doctorate 12,0.8
+,
+,
+Abbreviation notes:,
+,
+List of abbreviations and acronyms found within various Census products.,
+(https://www12.statcan.gc.ca/census-recensement/2021/ref/symb-ab-acr-eng.cfm),
+,
+,
+,
+iBall:,
+i1,Geography name: Canada; Geographic area type: Country; Geographic area type abbreviation: Country; Geographic level: Country; Province or territory abbreviation: ...; Dissemination Geography Unique Identifier (DGUID): 2021A000011124; Alternative geographic code: 01; Province or territory geocode: 01; Long-form total non-response rate: 4.3; Data quality flag: 20000; Data quality note: Excludes census data for one or more incompletely enumerated reserves or settlements.
+,
+,
+,
+Footnotes:,
+1,"Note for multicycle education tables  For information on the data quality and comparability of the education data for this table, refer to the Education Reference Guides for the Census of Population for 2021 (Catalogue no. 98-500-X2021013), 2016 (Catalogue no. 98-500-X2016013) and 2006 (Catalogue no. 97-560-GWE2006003) and for the 2011 National Household Survey (Catalogue no. 99-012-X2011006)."
+2,"Historical comparison of geographic areas  The boundaries and names of census geographies can change from one census to the next. In order to facilitate data comparisons between censuses, previous census data have been adjusted to reflect as closely as possible the 2021 boundaries of these areas. The methodology used for this adjustment involved spatially linking blocks of previous censuses. A previous census block was linked to the 2021 area within which its representative point fell. A limited number of interactive linkages were completed to further enhance the adjustment in certain areas. For some census geographies, it was not possible to reflect the 2021 boundaries. The 2021 boundaries may not be reflected as there was no previous census block to assign to the 2021 area. As well previous census data for some 2021 areas may not be available due to the fact that the concordance did not produce an accurate representation of the 2021 area."
+3,"Age    'Age' refers to the age of a person (or subject) of interest at last birthday (or relative to a specified, well-defined reference date)."
+4,"Gender  Gender refers to an individual's personal and social identity as a man, woman or non-binary person (a person who is not exclusively a man or a woman).   Gender includes the following concepts:   gender identity, which refers to the gender that a person feels internally and individually;   gender expression, which refers to the way a person presents their gender, regardless of their gender identity, through body language, aesthetic choices or accessories (e.g., clothes, hairstyle and makeup), which may have traditionally been associated with a specific gender.  A person's gender may differ from their sex at birth, and from what is indicated on their current identification or legal documents such as their birth certificate, passport or driver's licence. A person's gender may change over time.   Some people may not identify with a specific gender."
+5,"Given that the non-binary population is small, data aggregation to a two-category gender variable is sometimes necessary to protect the confidentiality of responses provided. In these cases, individuals in the category “non-binary persons” are distributed into the other two gender categories and are denoted by the “+” symbol.  The sex variable in census years prior to 2021 and the two-category gender variable in the 2021 Census are included together. Although sex and gender refer to two different concepts, the introduction of gender is not expected to have a significant impact on data analysis and historical comparability, given the small size of the transgender and non-binary populations. For additional information on changes of concepts over time, please consult the Age, Sex at Birth and Gender Reference Guide. "
+6,"Highest certificate, diploma or degree  Highest certificate, diploma or degree is the classification used in the census to measure the broader concept of 'Educational attainment.'  This variable refers to the highest level of education that a person has successfully completed and is derived from the educational qualifications questions, which asked for all certificates, diplomas and degrees to be reported.  The general hierarchy used in deriving this variable (high school, trades, college, university) is loosely tied to the 'in-class' duration of the various types of education. At the detailed level, someone who has completed one type of certificate, diploma or degree will not necessarily have completed the credentials listed below it in the hierarchy. For example, a person with an apprenticeship or trades certificate or diploma may not have completed a high school certificate or diploma, nor does an individual with a 'master's degree' necessarily have a 'university certificate or diploma above bachelor level.' Although the hierarchy may not fit all programs perfectly, it gives a general measure of educational attainment.  This variable is reported for persons aged 15 years and over in private households."
+7,"For information on data quality for this variable, refer to the Education Reference Guide, Census of Population, 2021, Catalogue no. 98-500-X2021013."
+8,"'High (secondary) school diploma or equivalency certificate' includes only people who have this as their highest educational credential. It excludes persons with a postsecondary certificate, diploma or degree."
+9,"'Non-apprenticeship trades certificate or diploma' includes trades certificates or diplomas such as pre-employment or vocational certificates and diplomas from brief trade programs completed at colleges, institutes of technology, vocational centres and similar institutions. It also includes qualifications from vocational training programs in the province of Quebec such as the Diplôme d'études professionnelles (DEP)/Diploma of Vocational Studies (DVS)."
+10,"'Apprenticeship certificate' includes Certificates of Apprenticeship, Certificates of Qualification and Journeyperson's designations."
+11,"College, CEGEP and other non-university certificates and diplomas obtained from programs that are typically completed in less than 3 months are not included in this category."
+12,'Earned doctorate' does not include honorary doctorates.
+,
+,
+,
+"How to cite: Statistics Canada. Table 98-10-0384-01  Highest level of education by census year: Canada, provinces and territories, census metropolitan areas and census agglomerations",
+https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=9810038401,

@@ -1,0 +1,487 @@
+measure,location,sex,age,cause,metric,year,val,upper,lower
+Deaths,Global,Both,All ages,Nutritional deficiencies,Number,2019,251577.35270159022,289040.0656104014,221149.73926341743
+Deaths,Global,Both,All ages,Nutritional deficiencies,Percent,2019,0.004449676194405365,0.005023462262253083,0.003963935450835456
+Deaths,Global,Both,All ages,Nutritional deficiencies,Rate,2019,3.2514184550841483,3.735591433379654,2.858168018132492
+Deaths,Global,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,953728.3140635482,1108382.1489196809,849268.8780399981
+Deaths,Global,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.016877758170335974,0.019793676376267506,0.014960943732533507
+Deaths,Global,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,12.326108881353639,14.324875174904797,10.97606153230821
+Deaths,Global,Both,All ages,Respiratory infections and tuberculosis,Number,2019,3683097.551957936,4011671.9543753834,3382547.4219005597
+Deaths,Global,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.06514895383695311,0.06896863084314384,0.06100334201564927
+Deaths,Global,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,47.60083220414457,51.84737055275154,43.71648319954386
+Deaths,Global,Both,All ages,Enteric infections,Number,2019,1748251.4909485346,2416191.59021406,1286411.0769440976
+Deaths,Global,Both,All ages,Enteric infections,Percent,2019,0.030920469017837186,0.04259637796625925,0.022778562004817017
+Deaths,Global,Both,All ages,Enteric infections,Rate,2019,22.594629845480917,31.227174636659797,16.625744215386504
+Deaths,Global,Both,All ages,Other infectious diseases,Number,2019,730486.28636117,904683.9393248751,605255.81975398
+Deaths,Global,Both,All ages,Other infectious diseases,Percent,2019,0.012917149659046279,0.015834961956106713,0.010807457155530897
+Deaths,Global,Both,All ages,Other infectious diseases,Rate,2019,9.440899855074989,11.6922529979406,7.822405002923527
+Deaths,Global,Both,All ages,Maternal and neonatal disorders,Number,2019,2078909.7893603297,2451710.700574644,1783925.2047891119
+Deaths,Global,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.03674515329278875,0.04193445146073244,0.03249660687210247
+Deaths,Global,Both,All ages,Maternal and neonatal disorders,Rate,2019,26.86810073718754,31.68622824261596,23.0556815669379
+Deaths,Global,Both,All ages,Non-communicable diseases,Number,2019,42034124.45851615,43942475.73422497,40081323.113309674
+Deaths,Global,Both,All ages,Non-communicable diseases,Percent,2019,0.7436713518938817,0.7571679422733784,0.7282061652373859
+Deaths,Global,Both,All ages,Non-communicable diseases,Rate,2019,543.2544962417023,567.9182765462151,518.0162374527689
+Deaths,Global,Both,All ages,Neglected tropical diseases and malaria,Number,2019,747343.7153240553,1247137.8087542348,406562.0758628991
+Deaths,Global,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.01321213830772649,0.021997295719169398,0.007310734971779823
+Deaths,Global,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,9.65876746138615,16.118171384951907,5.254461192164362
+Deaths,Global,Both,All ages,Injuries,Number,2019,4299440.550189686,4611536.817696144,3920266.4792103255
+Deaths,Global,Both,All ages,Injuries,Percent,2019,0.07605734962702532,0.07956275771691579,0.06994849202300298
+Deaths,Global,Both,All ages,Injuries,Rate,2019,55.5665293449743,59.600102132971095,50.66603429312437
+Deaths,High-middle SDI,Both,All ages,Nutritional deficiencies,Number,2019,17139.76671071589,18564.014190121197,15214.938610176157
+Deaths,High-middle SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.0014790111641155236,0.001588934332257376,0.0013216898933397646
+Deaths,High-middle SDI,Both,All ages,Nutritional deficiencies,Rate,2019,1.1982466960063316,1.297816303066721,1.0636813340163156
+Deaths,High-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,53282.10147524645,56269.08372690279,51092.04107277653
+Deaths,High-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.004600301310272764,0.004951578525686103,0.004301532572731332
+Deaths,High-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,3.724969139111545,3.933790045165009,3.571861300154015
+Deaths,High-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,378077.1474486458,402695.9947374992,343766.0069105076
+Deaths,High-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.03262638029532914,0.034460171576511066,0.029915573625358717
+Deaths,High-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,26.431497021636847,28.15260868676296,24.03279396575871
+Deaths,High-middle SDI,Both,All ages,Enteric infections,Number,2019,33683.48763490344,46431.78962286787,25180.178503002855
+Deaths,High-middle SDI,Both,All ages,Enteric infections,Percent,2019,0.002907492959286458,0.0040608341992062315,0.0021588072166727084
+Deaths,High-middle SDI,Both,All ages,Enteric infections,Rate,2019,2.3548236361501376,3.2460615972373743,1.7603545138808108
+Deaths,High-middle SDI,Both,All ages,Other infectious diseases,Number,2019,29900.77338662694,33754.12992792092,27085.12631284928
+Deaths,High-middle SDI,Both,All ages,Other infectious diseases,Percent,2019,0.0025800049549219873,0.0028893096593126605,0.002369065194079785
+Deaths,High-middle SDI,Both,All ages,Other infectious diseases,Rate,2019,2.0903728459827566,2.3597622619573144,1.8935300382469553
+Deaths,High-middle SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,65743.677129165,75943.055338087,56633.39654248658
+Deaths,High-middle SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.005672594977225048,0.0064947412613893364,0.004899143022730413
+Deaths,High-middle SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,4.596161968416813,5.309203834530359,3.9592592732445913
+Deaths,High SDI,Both,All ages,Nutritional deficiencies,Number,2019,16051.26254857108,17672.3678624636,13335.887415711082
+Deaths,High SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.001804763817617294,0.001990277058470391,0.0014927386123848156
+Deaths,High SDI,Both,All ages,Nutritional deficiencies,Rate,2019,1.5839257501992245,1.7438951259844158,1.315974703895363
+Deaths,High SDI,Both,All ages,Non-communicable diseases,Number,2019,7859444.902538173,8008066.373958908,7738317.804304639
+Deaths,High SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.8836698871496694,0.8951654408411611,0.8775088174956779
+Deaths,High SDI,Both,All ages,Non-communicable diseases,Rate,2019,775.5637368544852,790.2295847841084,763.6110116804718
+Deaths,High-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,14733.77246212843,20246.68066329573,10438.101010256976
+Deaths,High-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.0012718036759626207,0.0017468230664780902,0.0009073087370961839
+Deaths,High-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,1.0300428512493462,1.4154520664929193,0.7297310552249837
+Deaths,High-middle SDI,Both,All ages,Injuries,Number,2019,743580.0870655298,797138.0549470901,685556.7076065671
+Deaths,High-middle SDI,Both,All ages,Injuries,Percent,2019,0.06415201636031517,0.06671660089721475,0.05986537945705861
+Deaths,High-middle SDI,Both,All ages,Injuries,Rate,2019,51.983927061581056,55.72818211137528,47.92749362807609
+Deaths,Low-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,188040.7362644896,303470.70228980685,103632.1632044861
+Deaths,Low-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.015200767533897333,0.02425671187798022,0.008612792470008046
+Deaths,Low-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,10.660011923095036,17.20372600631151,5.874897733978785
+Deaths,High-middle SDI,Both,All ages,Non-communicable diseases,Number,2019,10254046.990191944,10792274.182177423,9689011.983449189
+Deaths,High-middle SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.884710394302572,0.890573478143088,0.8808273977376392
+Deaths,High-middle SDI,Both,All ages,Non-communicable diseases,Rate,2019,716.8637784905976,754.491417500068,677.3619963844192
+Deaths,High SDI,Both,All ages,Injuries,Number,2019,537331.3114048806,562153.4997487046,500762.0816087765
+Deaths,High SDI,Both,All ages,Injuries,Percent,2019,0.060412732163077285,0.06278939686437135,0.05624317041137911
+Deaths,High SDI,Both,All ages,Injuries,Rate,2019,53.02342404200927,55.472857734537016,49.41480169446957
+Deaths,Low-middle SDI,Both,All ages,Non-communicable diseases,Number,2019,7967232.9683860615,8566666.464196108,7365244.076806927
+Deaths,Low-middle SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.644435497777469,0.6642203311316855,0.6191184153347439
+Deaths,Low-middle SDI,Both,All ages,Non-communicable diseases,Rate,2019,451.66169907786053,485.64352843769564,417.5350045685487
+Deaths,Low-middle SDI,Both,All ages,Injuries,Number,2019,1110888.8090913135,1222377.0359847469,980977.2510713392
+Deaths,Low-middle SDI,Both,All ages,Injuries,Percent,2019,0.089844233598194,0.09549495929316873,0.08144752817662546
+Deaths,Low-middle SDI,Both,All ages,Injuries,Rate,2019,62.97618370037501,69.2964409572763,55.61150950822059
+Deaths,High SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,438.3251091835491,527.6424373743841,205.88223491570972
+Deaths,High SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,4.92812270252413e-05,5.935459603799776e-05,2.3115719471722618e-05
+Deaths,High SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,0.04325357119378221,0.05206733370201886,0.020316294273099948
+Deaths,High SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,11317.263425842104,12466.342387223192,10796.16575245967
+Deaths,High SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.0012725011244068976,0.0013997451502317237,0.0012080104026695308
+Deaths,High SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,1.1167785031075317,1.2301686959622178,1.0653570014816158
+Deaths,High SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,398924.2210408326,432988.71999950596,338157.1451853094
+Deaths,High SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.04485295526648992,0.048475120683502196,0.03825593749865268
+Deaths,High SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,39.36552306541095,42.72698057724266,33.36907662260814
+Deaths,High SDI,Both,All ages,Enteric infections,Number,2019,30455.918375007474,33430.378181245695,25749.240105490895
+Deaths,High SDI,Both,All ages,Enteric infections,Percent,2019,0.0034243515638812385,0.0037513081441054364,0.002902803961450938
+Deaths,High SDI,Both,All ages,Enteric infections,Rate,2019,3.0053656660444137,3.2988829806965656,2.5409144188959987
+Deaths,High SDI,Both,All ages,Other infectious diseases,Number,2019,17768.739536082303,20787.962632457915,15051.211231423364
+Deaths,High SDI,Both,All ages,Other infectious diseases,Percent,2019,0.001997767856668268,0.0023329760932503585,0.0016946442420171872
+Deaths,High SDI,Both,All ages,Other infectious diseases,Rate,2019,1.7534050056572814,2.0513395259776948,1.4852414860824463
+Deaths,High SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,22380.721937325947,24846.934743362268,20098.2813753687
+Deaths,High SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.002515759831163927,0.002762183734821913,0.002275571865328453
+Deaths,High SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,2.208511740264008,2.4518756474415007,1.9832823311478318
+Deaths,Low-middle SDI,Both,All ages,Nutritional deficiencies,Number,2019,59226.22713189,70361.76149025612,50936.46776228371
+Deaths,Low-middle SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.004790290595356465,0.005571982490845582,0.0041478583020393206
+Deaths,Low-middle SDI,Both,All ages,Nutritional deficiencies,Rate,2019,3.357529330760805,3.9888017421985764,2.887583639869152
+Deaths,Low-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,279005.7220917852,322204.6294736816,246094.49973662928
+Deaths,Low-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.02258762237149104,0.026395670116449804,0.01974149228612839
+Deaths,Low-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,15.816808544754878,18.265750603288225,13.951074397574478
+Deaths,Low-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,1112288.103393572,1228096.642139234,1011880.2360964963
+Deaths,Low-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.08995123111784764,0.09562098697658741,0.084677672325353
+Deaths,Low-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,63.055509564771626,69.62068490044233,57.36339686715991
+Deaths,Low SDI,Both,All ages,Nutritional deficiencies,Number,2019,104285.16040922476,130286.63730152562,83825.00652141139
+Deaths,Low SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.013445653478449528,0.016124008008610722,0.011324468052227542
+Deaths,Low SDI,Both,All ages,Nutritional deficiencies,Rate,2019,9.239595909264226,11.543309482568379,7.4268398716560755
+Deaths,Low SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,317458.0841210216,387732.2403322006,267069.7626185227
+Deaths,Low SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.041034434510942686,0.05023159721693907,0.034135528631154904
+Deaths,Low SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,28.126575285470697,34.35281882489542,23.662203486048366
+Deaths,Low SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,1009243.872583741,1165379.184904854,880346.8482915096
+Deaths,Low SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.13020013166737565,0.1399615788113854,0.12003891323321678
+Deaths,Low SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,89.41833641509996,103.251821326595,77.99814572168385
+Deaths,Low SDI,Both,All ages,Enteric infections,Number,2019,771699.0443177567,1009001.4563066068,593417.169401096
+Deaths,Low SDI,Both,All ages,Enteric infections,Percent,2019,0.09955419659227055,0.12535102475905918,0.07895516443314692
+Deaths,Low SDI,Both,All ages,Enteric infections,Rate,2019,68.37202249180942,89.39685849404427,52.576366851908496
+Deaths,Low SDI,Both,All ages,Other infectious diseases,Number,2019,349672.3063756883,474558.6039055072,262674.8761890986
+Deaths,Low SDI,Both,All ages,Other infectious diseases,Percent,2019,0.04508378115991765,0.059161576944536706,0.034879757143418455
+Deaths,Low SDI,Both,All ages,Other infectious diseases,Rate,2019,30.98073396918331,42.04557693678925,23.272819469035376
+Deaths,Low SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,941154.2911394696,1140660.6630144354,789178.0532235098
+Deaths,Low SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.12125856743270515,0.13335086515996825,0.11027244646142367
+Deaths,Low SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,83.38564474825809,101.06177671386631,69.92065106513513
+Deaths,Low-middle SDI,Both,All ages,Enteric infections,Number,2019,685601.8512975832,1041160.0564677112,457772.73179448367
+Deaths,Low-middle SDI,Both,All ages,Enteric infections,Percent,2019,0.05543496863757463,0.08371204802203713,0.037345310746805443
+Deaths,Low-middle SDI,Both,All ages,Enteric infections,Rate,2019,38.866705451782664,59.02326717219965,25.951093767965183
+Deaths,Low SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,442274.20766098914,781598.7510074921,214458.2175116135
+Deaths,Low SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.05702365900580279,0.09936059742585387,0.027812144144725017
+Deaths,Low SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,39.1852008842101,69.2491299256423,19.00085555272468
+Deaths,Low-middle SDI,Both,All ages,Other infectious diseases,Number,2019,219895.94207672673,261216.06166443301,187338.88395544625
+Deaths,Low-middle SDI,Both,All ages,Other infectious diseases,Percent,2019,0.017782152481405248,0.02092878102755285,0.015488389973116789
+Deaths,Low-middle SDI,Both,All ages,Other infectious diseases,Rate,2019,12.465880590262223,14.808314342750382,10.620223980698709
+Deaths,Low-middle SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,742087.788022976,862015.7554812738,636224.9001190356
+Deaths,Low-middle SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.05997323588676422,0.06736453444677222,0.053068702607324485
+Deaths,Low-middle SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,42.068887973196254,48.86759334105765,36.067530662608014
+Deaths,Low SDI,Both,All ages,Non-communicable diseases,Number,2019,3192505.769602112,3499339.7138980776,2913365.7447751425
+Deaths,Low SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.41242284950882074,0.44125446556331244,0.38305877817394074
+Deaths,Low SDI,Both,All ages,Non-communicable diseases,Rate,2019,282.85388959816805,310.0391731554407,258.1222689017778
+Deaths,Low SDI,Both,All ages,Injuries,Number,2019,619409.6908418773,700943.2580415932,542303.1275437092
+Deaths,Low SDI,Both,All ages,Injuries,Percent,2019,0.07997672664371515,0.08839999966626383,0.07111264864326088
+Deaths,Low SDI,Both,All ages,Injuries,Rate,2019,54.879286978159406,62.103106848695596,48.047696711322565
+Deaths,Middle SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,101636.72629689274,150541.16960662007,66941.75015107321
+Deaths,Middle SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.006393843332714855,0.009374091226402032,0.004249016903959235
+Deaths,Middle SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,4.24093190072494,6.2815369189697785,2.793236402329146
+Deaths,Middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,291762.672867361,339222.43065094354,263167.9504227939
+Deaths,Middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.018368481694786724,0.02168656895647524,0.0162102849824931
+Deaths,Middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,12.17419796845418,14.154521500295711,10.981043928316158
+Deaths,Middle SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,782299.2671243207,847174.0568201877,722829.3337336429
+Deaths,Middle SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.04922045071144319,0.05244649963810385,0.045915862106728364
+Deaths,Middle SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,32.64251062327556,35.34950026371652,30.161046030311546
+Deaths,Middle SDI,Both,All ages,Enteric infections,Number,2019,226086.18363655827,329348.3766582806,158582.6712120242
+Deaths,Middle SDI,Both,All ages,Enteric infections,Percent,2019,0.014228055450039882,0.020918531272584702,0.009962748310512658
+Deaths,Middle SDI,Both,All ages,Enteric infections,Rate,2019,9.43375631458868,13.742513045353522,6.6170796103830085
+Deaths,Middle SDI,Both,All ages,Other infectious diseases,Number,2019,112790.68215240359,131807.31715937774,98450.71932996085
+Deaths,Middle SDI,Both,All ages,Other infectious diseases,Percent,2019,0.007094995647597432,0.008191299976013306,0.006331206343029087
+Deaths,Middle SDI,Both,All ages,Other infectious diseases,Rate,2019,4.70634601755448,5.499841213473479,4.107991387248299
+Deaths,Middle SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,306306.1254802014,359134.8141149285,261218.57099125383
+Deaths,Middle SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.019262860826346685,0.0222229757104414,0.01669103935834949
+Deaths,Middle SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,12.78104348955358,14.985393029994551,10.89970339601993
+Deaths,Middle SDI,Both,All ages,Nutritional deficiencies,Number,2019,54704.80234594176,59489.82761653924,49550.63502652265
+Deaths,Middle SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.003442294145044899,0.003717026015861252,0.0031358746695646983
+Deaths,Middle SDI,Both,All ages,Nutritional deficiencies,Rate,2019,2.282632959999708,2.4822947068428127,2.0675682545235894
+Deaths,Middle SDI,Both,All ages,Non-communicable diseases,Number,2019,12737263.329801248,13580743.685341883,11921368.099380987
+Deaths,Middle SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.8011269626167667,0.8117305080838797,0.791025591300462
+Deaths,Middle SDI,Both,All ages,Non-communicable diseases,Rate,2019,531.479794277273,566.6751697855102,497.4354459751533
+Deaths,Middle SDI,Both,All ages,Injuries,Number,2019,1285578.5348305916,1395349.8750184567,1150214.8921716895
+Deaths,Middle SDI,Both,All ages,Injuries,Percent,2019,0.08086205557526083,0.08448455056935636,0.07282548956778875
+Deaths,Middle SDI,Both,All ages,Injuries,Rate,2019,53.6425288170362,58.22288864708584,47.994295041052915
+YLLs (Years of Life Lost),Global,Both,All ages,Nutritional deficiencies,Number,2019,12161341.111288773,14970968.512884265,10021427.804687543
+YLLs (Years of Life Lost),Global,Both,All ages,Nutritional deficiencies,Percent,2019,0.007244335632259952,0.008529091089983263,0.006157931765066912
+YLLs (Years of Life Lost),Global,Both,All ages,Nutritional deficiencies,Rate,2019,157.17475560974015,193.48674588771087,129.51823747467452
+YLLs (Years of Life Lost),Global,Both,All ages,Injuries,Number,2019,185218790.4638028,199696823.9436915,169682422.45267153
+YLLs (Years of Life Lost),Global,Both,All ages,Injuries,Percent,2019,0.1104773401370492,0.1162266851680632,0.10181352887668003
+YLLs (Years of Life Lost),Global,Both,All ages,Injuries,Rate,2019,2393.7917585797304,2580.9077479338007,2192.997715976497
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,2649228.593165394,2860628.9686739445,2506989.687448885
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.010716595122175593,0.011731850511432978,0.009870942788696642
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,185.20843733195363,199.98750671854265,175.26446891657244
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,8520731.965230599,9053356.603373097,7913515.615653886
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.034445825714826565,0.03609579108087694,0.03265540021110018
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,595.6871582452608,632.9231208833529,553.2364646668933
+YLLs (Years of Life Lost),High SDI,Both,All ages,Non-communicable diseases,Number,2019,130037877.27831098,132550365.81745201,127694076.40386328
+YLLs (Years of Life Lost),High SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.8377138034068567,0.8447544662228388,0.8326441787412415
+YLLs (Years of Life Lost),High SDI,Both,All ages,Non-communicable diseases,Rate,2019,12832.033723147773,13079.964082655875,12600.749327472158
+YLLs (Years of Life Lost),Global,Both,All ages,Non-communicable diseases,Number,2019,927464910.2275628,980136924.5648825,873124254.5488558
+YLLs (Years of Life Lost),Global,Both,All ages,Non-communicable diseases,Percent,2019,0.5533015164467312,0.5744124611532537,0.5299801311037673
+YLLs (Years of Life Lost),Global,Both,All ages,Non-communicable diseases,Rate,2019,11986.677231371477,12667.417201180906,11284.371523652633
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,11386252.350880312,18649984.03745984,6158452.615278426
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.026087818043029343,0.04143344997606034,0.014722509131862594
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,645.4855912126868,1057.265867781001,349.12210838371016
+YLLs (Years of Life Lost),High SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,11346.34328373611,14356.270290104841,5802.333951839259
+YLLs (Years of Life Lost),High SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,7.308733120709171e-05,9.22192867050085e-05,3.762683356655282e-05
+YLLs (Years of Life Lost),High SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,1.119648080225908,1.4166652698196276,0.5725696735545316
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Non-communicable diseases,Number,2019,198540148.46412715,210355446.5379576,186054479.611533
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.8024554679318086,0.8092013525857911,0.7963626869357474
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Non-communicable diseases,Rate,2019,13880.006708201588,14706.018060529128,13007.12951549763
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Enteric infections,Number,2019,1087898.3790518052,1420973.63987663,839456.4153116975
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Enteric infections,Percent,2019,0.004398463381731987,0.005790298842213196,0.0033820480110501724
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Enteric infections,Rate,2019,76.05533145760195,99.34073186828941,58.68667252394275
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Other infectious diseases,Number,2019,1357182.806068023,1578948.9823234591,1195516.3516213582
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Other infectious diseases,Percent,2019,0.005485601347764448,0.006292991123502039,0.0048953169380476615
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Other infectious diseases,Rate,2019,94.88109381505609,110.3848397218131,83.5789391145103
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,5699639.461193224,6597009.430401397,4902695.182897599
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.023035460942875362,0.026279062707729155,0.01983709249133496
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,398.4636586991693,461.19908671562683,342.74902357686904
+YLLs (Years of Life Lost),High SDI,Both,All ages,Nutritional deficiencies,Number,2019,184499.31217405543,197465.87884041562,163085.48245227654
+YLLs (Years of Life Lost),High SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.0011886141927904485,0.0012715122019284985,0.0010502432900338385
+YLLs (Years of Life Lost),High SDI,Both,All ages,Nutritional deficiencies,Rate,2019,18.206244559406738,19.485774987145657,16.09314496963481
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,688777.7856851836,943536.3318933583,470059.8314206536
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.002785190250530591,0.0038076869293477158,0.0019158838324074502
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,48.15268024994925,65.9629335296785,32.86203653944394
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Nutritional deficiencies,Number,2019,313202.09516017436,334328.899838178,289326.5759200672
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.0012661790371620875,0.0013356755418032341,0.0011826117008844376
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Nutritional deficiencies,Rate,2019,21.896060899901446,23.373042724091743,20.22691554175563
+YLLs (Years of Life Lost),Global,Both,All ages,Neglected tropical diseases and malaria,Number,2019,49171070.15124951,83142068.48175946,26430924.031627204
+YLLs (Years of Life Lost),Global,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.029285143104901223,0.04874076552309106,0.015822238159787456
+YLLs (Years of Life Lost),Global,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,635.4933114176102,1074.5389159735525,341.59670279739225
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Injuries,Number,2019,28553867.715128217,30443340.992825426,26617598.06243281
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Injuries,Percent,2019,0.11541121627112441,0.11880319306995543,0.11055491424017619
+YLLs (Years of Life Lost),High-middle SDI,Both,All ages,Injuries,Rate,2019,1996.2102300064018,2128.3039247693173,1860.844985363423
+YLLs (Years of Life Lost),High SDI,Both,All ages,Injuries,Number,2019,16695762.919267364,17520424.752872437,15992718.758251328
+YLLs (Years of Life Lost),High SDI,Both,All ages,Injuries,Percent,2019,0.1075470032784064,0.11118401666223088,0.10397860674270634
+YLLs (Years of Life Lost),High SDI,Both,All ages,Injuries,Rate,2019,1647.5245312963286,1728.901501456842,1578.148695794866
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Injuries,Number,2019,51232869.80435879,56490520.82955854,45295188.65816256
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Injuries,Percent,2019,0.11752454385187255,0.1254395517289332,0.10593308454950416
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Injuries,Rate,2019,2904.3866441825667,3202.4423938541145,2567.7800499339714
+YLLs (Years of Life Lost),Global,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,51183974.08246274,61972875.43897615,43501199.05934417
+YLLs (Years of Life Lost),Global,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.030538193560701327,0.03703190499911516,0.02584722244820278
+YLLs (Years of Life Lost),Global,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,661.508343851876,800.945509415262,562.2151593574139
+YLLs (Years of Life Lost),Global,Both,All ages,Respiratory infections and tuberculosis,Number,2019,139784350.98876554,159058897.6641131,124788423.71672016
+YLLs (Years of Life Lost),Global,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.0833049630476078,0.08901062600625333,0.07750202643424754
+YLLs (Years of Life Lost),Global,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,1806.5911484327287,2055.6978987050506,1612.7818322926482
+YLLs (Years of Life Lost),Global,Both,All ages,Enteric infections,Number,2019,85693162.81426491,108180739.3361035,67992900.51791807
+YLLs (Years of Life Lost),Global,Both,All ages,Enteric infections,Percent,2019,0.0510530225892963,0.06248823668912711,0.041741195351959456
+YLLs (Years of Life Lost),Global,Both,All ages,Enteric infections,Rate,2019,1107.509591212383,1398.1419574729123,878.74909718478
+YLLs (Years of Life Lost),Global,Both,All ages,Other infectious diseases,Number,2019,47762573.443094075,62415338.28733257,37296171.70835884
+YLLs (Years of Life Lost),Global,Both,All ages,Other infectious diseases,Percent,2019,0.028451337441079853,0.03646272486222456,0.02268897080445803
+YLLs (Years of Life Lost),Global,Both,All ages,Other infectious diseases,Rate,2019,617.2897166121066,806.6639568644712,482.02057814156626
+YLLs (Years of Life Lost),Global,Both,All ages,Maternal and neonatal disorders,Number,2019,178606117.28974292,211317395.467609,152987085.9699258
+YLLs (Years of Life Lost),Global,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.10634414804037325,0.11722753724000634,0.09653675370017595
+YLLs (Years of Life Lost),Global,Both,All ages,Maternal and neonatal disorders,Rate,2019,2308.3287096816757,2731.0935270023465,1977.2250139788425
+YLLs (Years of Life Lost),Low SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,18693293.47527259,24169613.510956213,14777089.72174987
+YLLs (Years of Life Lost),Low SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.04607045697817458,0.05930001917246668,0.03575670012625148
+YLLs (Years of Life Lost),Low SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,1656.21337922904,2141.4116950869115,1309.2403291910089
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,56099631.54837177,66818074.189883694,46660430.40588095
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.1378366524462859,0.1497518105914658,0.12422206807435673
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,4970.390074019742,5920.036969086853,4134.08312564239
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Enteric infections,Number,2019,47786508.52531422,60523601.60419159,37634769.90869602
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Enteric infections,Percent,2019,0.1173880515185749,0.13692154282165056,0.09768379421018562
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Enteric infections,Rate,2019,4233.852898685841,5362.350881003777,3334.415603619565
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Non-communicable diseases,Number,2019,205640075.74710694,223418883.19408917,189426356.17002344
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.4717474774566096,0.4920922163839757,0.4509647745221365
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Non-communicable diseases,Rate,2019,11657.716848369404,12665.595795921841,10738.56258720801
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Other infectious diseases,Number,2019,26287101.17879695,36635655.6167666,18933953.638209023
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Other infectious diseases,Percent,2019,0.0645638430501313,0.08639906391592062,0.04866852166320797
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Other infectious diseases,Rate,2019,2329.019695275287,3245.8947413187966,1677.535709733825
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,80537620.56846893,97790398.48749056,67157883.01751813
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.19772110752676736,0.2102912527649324,0.18575218615382477
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,7135.579660866836,8664.16431911066,5950.143805394364
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Enteric infections,Number,2019,27586238.12788861,36281844.18775024,20664424.29705085
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Enteric infections,Percent,2019,0.06323404647731826,0.08291564289763155,0.048940490798247485
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Enteric infections,Rate,2019,1563.8612845197858,2056.814386693784,1171.464299526123
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,14811243.506630406,17795806.132079598,12526805.373719271
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.03400400742078872,0.04116815914986802,0.02847865937597629
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,839.6480226202995,1008.8426014362539,710.1434364430098
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,45134311.36846346,50421775.397392444,40624674.39590272
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.10347026794740871,0.10936313987738985,0.09787889027182105
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,2558.6599312808744,2858.4057773726463,2303.009028974735
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Other infectious diseases,Number,2019,13414964.05220077,16864679.1667662,10898689.0785519
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Other infectious diseases,Percent,2019,0.030745290324568252,0.037790838086921984,0.02584296799302764
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Other infectious diseases,Rate,2019,760.4930696676748,956.057100010675,617.845674460959
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,63868517.63953271,74345081.4954838,54584283.63851316
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.14626881479958156,0.15991537552228585,0.13305978483962927
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,3620.700349684792,4214.6157843724195,3094.377984043418
+YLLs (Years of Life Lost),High SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,457135.34418571455,515468.73556230933,429774.1473590664
+YLLs (Years of Life Lost),High SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.0029451113783667006,0.003328467848555536,0.0027515861100821217
+YLLs (Years of Life Lost),High SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,45.10975013902541,50.86604254395298,42.40976912015815
+YLLs (Years of Life Lost),High SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,5011531.099519107,5323070.835677337,4486434.828244482
+YLLs (Years of Life Lost),High SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.032284452912727225,0.034083427518054515,0.029016286411934787
+YLLs (Years of Life Lost),High SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,494.53388058618407,525.2763725750913,442.71780051841927
+YLLs (Years of Life Lost),High SDI,Both,All ages,Enteric infections,Number,2019,412635.736785742,447452.36136304884,369551.9079170741
+YLLs (Years of Life Lost),High SDI,Both,All ages,Enteric infections,Percent,2019,0.0026582552041710486,0.002859754842771269,0.002394213788370467
+YLLs (Years of Life Lost),High SDI,Both,All ages,Enteric infections,Rate,2019,40.71856447239707,44.1542411387118,36.46708669887244
+YLLs (Years of Life Lost),High SDI,Both,All ages,Other infectious diseases,Number,2019,486665.50976445456,573073.3011788456,427257.83397515083
+YLLs (Years of Life Lost),High SDI,Both,All ages,Other infectious diseases,Percent,2019,0.003134844119439853,0.0036932724673127493,0.002762396234063067
+YLLs (Years of Life Lost),High SDI,Both,All ages,Other infectious diseases,Rate,2019,48.023763259568156,56.55041500580616,42.16146132802689
+YLLs (Years of Life Lost),High SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,1933935.5312315088,2152372.3302785596,1729371.2701070753
+YLLs (Years of Life Lost),High SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.012454828176033808,0.013663134781009102,0.011260626181254134
+YLLs (Years of Life Lost),High SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,190.83921142486636,212.39438004507704,170.65297375135032
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Nutritional deficiencies,Number,2019,3018654.7063631923,3720660.759746967,2463139.372295786
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.0069177336788227625,0.008271273922306949,0.00578786030711012
+YLLs (Years of Life Lost),Low-middle SDI,Both,All ages,Nutritional deficiencies,Rate,2019,171.12725572546796,210.9239138742113,139.63514288726168
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Non-communicable diseases,Number,2019,105319816.66740093,120808972.9488706,92316933.80513039
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.2593380480484743,0.28665438762682266,0.23123256022437888
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Non-communicable diseases,Rate,2019,9331.26576615495,10703.59471933132,8179.21898565971
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Nutritional deficiencies,Number,2019,7151878.256977805,9228085.532231636,5554097.622235661
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.01755897359284565,0.021189787467874643,0.014486876858239696
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Nutritional deficiencies,Rate,2019,633.6516607676675,817.6022456058442,492.08935833907395
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,31495502.099194117,55490783.73304445,15383360.64571413
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.0773753806243509,0.1322093151246806,0.03796317587058045
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,2790.4805555651724,4916.4465621932395,1362.9555301552157
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Injuries,Number,2019,55244729.96412478,59806729.24291063,50369524.974292785
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Injuries,Percent,2019,0.12832573060879215,0.1328603080670091,0.11813059175184458
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Injuries,Rate,2019,2305.1621809168214,2495.5178621493333,2101.7375615173696
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Injuries,Number,2019,33367592.958962567,38382734.8995488,28884514.124566898
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Injuries,Percent,2019,0.08214748621439541,0.0923843094040456,0.0718146714296648
+YLLs (Years of Life Lost),Low SDI,Both,All ages,Injuries,Rate,2019,2956.3465616374724,3400.6848047469075,2559.1487561525164
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,14523519.318817405,17356970.559587292,12739069.280464573
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.03376341259615858,0.04076334671496691,0.0291650873500689
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,606.0137770479396,724.2434189691892,531.5551500473598
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,24925908.686074108,27445653.460302286,22753283.556137092
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.057895985560348535,0.06161866059701169,0.054483491101259905
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,1040.067750633172,1145.2075596771376,949.4119851675307
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Enteric infections,Number,2019,8778720.23661377,11399407.611756472,6810618.8420189945
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Enteric infections,Percent,2019,0.020388498969280616,0.026430049384467164,0.016045081489405828
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Enteric infections,Rate,2019,366.3041506299787,475.65592824040687,284.1824187294756
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Other infectious diseases,Number,2019,6184964.1100981645,7488212.908964057,5186707.865983751
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Other infectious diseases,Percent,2019,0.014360312527529466,0.01707984026589819,0.01228259758188398
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Other infectious diseases,Rate,2019,258.0761163315433,312.4559611678169,216.42250444329719
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,26461679.581119295,31092427.418531585,22584943.98013916
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.06141538383649242,0.06979591159768715,0.05375508061123782
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,1104.1498990681414,1297.3742082664521,942.3877853136444
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,5575100.84116832,8131346.166794097,3700471.777955708
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.01294635578197923,0.01863535464225092,0.008605632956886577
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,232.6287344006279,339.2915790485155,154.40726381743437
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Nutritional deficiencies,Number,2019,1484990.7360115384,1675023.1947029578,1326776.7431194715
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.003448935418628578,0.0037777415524670624,0.003154421912343985
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Nutritional deficiencies,Rate,2019,61.96327660373358,69.89264176139787,55.36158060226034
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Non-communicable diseases,Number,2019,287358086.3621189,308763131.5657911,266918580.16714045
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.66745538470079,0.682560865988938,0.6526864965900653
+YLLs (Years of Life Lost),Middle SDI,Both,All ages,Non-communicable diseases,Rate,2019,11990.410551246165,12883.565440705528,11137.544102122853
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Non-communicable diseases,Number,2019,1620165810.777062,1816695861.1829448,1429471142.3619664
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Non-communicable diseases,Percent,2019,0.638158188790194,0.6597154809589693,0.6141177407436443
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Non-communicable diseases,Rate,2019,20939.23384155084,23479.21379605121,18474.67112351302
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Neglected tropical diseases and malaria,Number,2019,62903804.673908025,95989237.10130572,38609885.53308258
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.0247905695409398,0.03748906523580077,0.0158749989201717
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,812.9769600300766,1240.5773955767554,498.9991866233581
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Injuries,Number,2019,249123806.0360606,274753825.60728025,226218036.2223944
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Injuries,Percent,2019,0.09821527332244495,0.10322123196337736,0.09206007822734888
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Injuries,Rate,2019,3219.7084985914585,3550.9542078858044,2923.67134778956
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Respiratory infections and tuberculosis,Number,2019,153045101.92589077,171785901.62733537,136777025.02342585
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.060358978627808875,0.06633235334613788,0.05492285235954118
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,1977.9748197458935,2220.183354647637,1767.7240761817673
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Enteric infections,Number,2019,96835558.79383524,119697444.83441684,79185577.49213324
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Enteric infections,Percent,2019,0.0381762324732348,0.04635351741472904,0.03172112005745859
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Enteric infections,Rate,2019,1251.5153672998792,1546.9853585059197,1023.4047113923328
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Other infectious diseases,Number,2019,51409753.68326212,66036626.8903373,40668091.17024717
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Other infectious diseases,Percent,2019,0.02027081825492224,0.025833045035997246,0.01633104479121917
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Other infectious diseases,Rate,2019,664.4263488031854,853.4659621664414,525.5997042024306
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Maternal and neonatal disorders,Number,2019,198562793.84748942,232408336.0625292,172372482.74547225
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.07830200036634535,0.0889618672470455,0.06843012452644587
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Maternal and neonatal disorders,Rate,2019,2566.251395349531,3003.6755887380396,2227.7644053759054
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Nutritional deficiencies,Number,2019,49775123.91928983,65839421.787080795,36889949.52230573
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Nutritional deficiencies,Percent,2019,0.019543372669878874,0.024014973256616865,0.015699901617189635
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,Nutritional deficiencies,Rate,2019,643.3001809477126,850.9172577410255,476.7705097295483
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Nutritional deficiencies,Number,2019,3777225.0944432076,5243541.8860622905,2628068.30726057
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.00903690005889844,0.011721055508879943,0.006867653246841984
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Nutritional deficiencies,Rate,2019,264.067041627763,366.5777280630504,183.72911482424684
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,56198316.99501294,66981633.768092506,48372281.38710283
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.022184565954231798,0.026590392350148272,0.01878144251917561
+DALYs (Disability-Adjusted Life Years),Global,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,726.3143643895229,865.6793540696439,625.1696614484466
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,1632064.467509877,2120206.419954879,1225664.2455908295
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.003918289270592627,0.004816808630419331,0.0031320525412746785
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,114.09816066168413,148.2243241953804,85.68658824125609
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Nutritional deficiencies,Number,2019,1456033.7376528892,1973129.6502431915,1049926.1384815979
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.004843910176743127,0.005997960152145342,0.003797644864771674
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Nutritional deficiencies,Rate,2019,143.68024466913653,194.7068557407658,103.60587159520902
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Nutritional deficiencies,Number,2019,16197717.41760326,21765779.08043487,11889739.543847075
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.02595374613425464,0.03282871514482927,0.020110764594388677
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Nutritional deficiencies,Rate,2019,918.2471002225183,1233.9000001921636,674.02823355058
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Non-communicable diseases,Number,2019,341027779.47899073,381471649.9087039,303128777.8296576
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.8197121534253095,0.8286620735701989,0.8110537908552335
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Non-communicable diseases,Rate,2019,23841.36359053206,26668.807798732025,21191.831991023213
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Injuries,Number,2019,42886162.6095496,48524961.39150797,38536714.22874582
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Injuries,Percent,2019,0.10313923792016699,0.10870013553623319,0.09769740710681737
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Injuries,Rate,2019,2998.1856532011448,3392.395920118128,2694.1142944883213
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Other infectious diseases,Number,2019,1739121.4140933168,1993990.1426950404,1531508.892378177
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Other infectious diseases,Percent,2019,0.004185767639551858,0.004766278083374604,0.0037884327503540705
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Other infectious diseases,Rate,2019,121.58254680842924,139.40050297532463,107.06828751928875
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,8867745.344544725,10057170.695190601,7815518.1088411845
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.021361803500599394,0.02445864493944747,0.018570736044178516
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,619.946977077752,703.1000923221125,546.3854269172505
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Non-communicable diseases,Number,2019,256374664.99211785,291994783.71069896,224312282.16116634
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.8565203394504713,0.865496880482439,0.8463305229019206
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Non-communicable diseases,Rate,2019,25298.846888269592,28813.811713795854,22134.956594592324
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Injuries,Number,2019,28892732.815466378,33553226.144370116,25149211.902780425
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Injuries,Percent,2019,0.09656424093758126,0.1039985942161372,0.09017289161953133
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Injuries,Rate,2019,2851.111765293341,3311.005519441642,2481.7041157660824
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,3103976.708416897,3384980.7090265164,2887647.730821667
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.007478766990860807,0.008280158829046128,0.006795244290941105
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,217.00002678658385,236.6451083666337,201.87639721630222
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,10313820.934947573,11232595.05948028,9488059.035002101
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.02483488209357938,0.026854658096732747,0.02293229478072531
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,721.0425945164831,785.2743940315328,663.3133100403445
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Enteric infections,Number,2019,2639174.7817035113,3333689.598808147,2084490.694375607
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Enteric infections,Percent,2019,0.006332199100441306,0.007392107771585764,0.005467271233956997
+DALYs (Disability-Adjusted Life Years),High-middle SDI,Both,All ages,Enteric infections,Rate,2019,184.50557208473091,233.05933007740924,145.72742613993165
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Non-communicable diseases,Number,2019,346083882.4332374,390722113.9662068,303579881.5554208
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.5562348323711233,0.5786268850609093,0.5308045649972047
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Non-communicable diseases,Rate,2019,19619.46324194451,22150.00045329656,17209.915368767342
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,208706.93247287587,282686.54364999454,149604.630255217
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.0006952201439951411,0.0008896485459401512,0.000538402419920931
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,20.5950331687963,27.89528202950642,14.76286525706151
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Non-communicable diseases,Number,2019,176547839.80112326,201405569.96786004,152952284.5654469
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.3442576767575203,0.37446145342395076,0.3107319435235407
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Non-communicable diseases,Rate,2019,15642.021281022047,17844.39965452124,13551.470767632884
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Non-communicable diseases,Number,2019,499180953.79069823,561524835.2888471,440038035.96618897
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Non-communicable diseases,Percent,2019,0.7273486168140959,0.7427933051545553,0.711681886700112
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Non-communicable diseases,Rate,2019,20829.010420714392,23430.394442944526,18361.191001076273
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,750587.0600461861,920520.7616802172,615873.855920829
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.0025092509576514414,0.0029535502179960644,0.0021369997865049125
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,74.06733075207998,90.83625251323922,60.773939515077664
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,6173515.887805823,6840367.853624976,5495278.247092308
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.020676681331480325,0.02289765474152319,0.018251604164596896
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,609.197610117603,675.0020287442214,542.2696621988803
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Enteric infections,Number,2019,1182954.9172689582,1462546.7568248648,947752.6327821822
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Enteric infections,Percent,2019,0.003942890081263719,0.004436377679477828,0.0035170690354783666
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Enteric infections,Rate,2019,116.7330450870921,144.32294419179487,93.52347177303187
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Other infectious diseases,Number,2019,668283.0330673356,769667.7449126993,588780.5873513878
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Other infectious diseases,Percent,2019,0.002236452872451641,0.002574639408298384,0.002006964892038632
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Other infectious diseases,Rate,2019,65.94563519807514,75.95019747362625,58.100397442337616
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,3584671.4867886193,4005715.293348306,3188188.892109364
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.012011014048361423,0.013631991759304853,0.010505886603667159
+DALYs (Disability-Adjusted Life Years),High SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,353.73251523039175,395.28078130315413,314.60792990148417
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,15179995.544390496,22174386.816879977,9518155.552872172
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.024403265816251008,0.03536658419750751,0.0159848633528407
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,860.5525414882715,1257.0639349272794,539.5833567508289
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Injuries,Number,2019,64627435.86044892,71273877.25058834,58054160.087926656
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Injuries,Percent,2019,0.10396866450870848,0.1099903048730073,0.09539897925414265
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Injuries,Rate,2019,3663.723353339928,4040.5095001745326,3291.084958591678
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,16079557.064212935,19084416.443716474,13750719.008261707
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.025899707471071207,0.03100847785250439,0.021955596804248415
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,911.5486007324614,1081.8938006559333,779.5269870302072
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,48973594.063039154,54508667.54956578,43988310.308240965
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.07879349960924226,0.08540606397174508,0.07280674057781909
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,2776.308511654137,3090.091314964316,2493.693237315861
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Enteric infections,Number,2019,30947281.927620254,39554510.86533845,23969083.03579142
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Enteric infections,Percent,2019,0.049788895651931606,0.06441455600881058,0.03942414611867692
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Enteric infections,Rate,2019,1754.3985462373173,2242.3415575422136,1358.8050973582751
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Other infectious diseases,Number,2019,14550071.903359557,18062069.638921976,12035744.04632902
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Other infectious diseases,Percent,2019,0.023406425989656865,0.028911031962544638,0.019744508972102417
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Other infectious diseases,Rate,2019,824.8422286197662,1023.937054978664,682.3052152738057
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,69350607.49724191,79976590.08451475,59971341.93852817
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.11155096244775967,0.1253436188972927,0.0978557017962151
+DALYs (Disability-Adjusted Life Years),Low-middle SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,3931.479515984499,4533.865484712054,3399.769820138952
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,37402634.85163099,61102872.243619695,20974987.714830462
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.07286161183475066,0.11761410699816957,0.041202995543939774
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,3313.8485918295823,5413.673874701172,1858.3699725476113
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Injuries,Number,2019,40478482.38635786,46085482.86558717,35293700.77680545
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Injuries,Percent,2019,0.07894966716329668,0.08771840468008003,0.07084823309803322
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Injuries,Rate,2019,3586.366639343356,4083.14315565533,3126.9984342980424
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Neglected tropical diseases and malaria,Number,2019,8457692.127209729,11004301.131965866,6184827.490667956
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Neglected tropical diseases and malaria,Percent,2019,0.01232664589625882,0.016007774891418393,0.009431225103496005
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Neglected tropical diseases and malaria,Rate,2019,352.9088121553413,459.1695680891324,258.0704156983085
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,20036161.63640638,25354618.48096253,16202480.566221433
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.0391227634735699,0.04988258966836316,0.030835519249355257
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,1775.190605898716,2246.402347931117,1435.5290107637377
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,58715827.99928576,69373871.85453239,49098758.98471042
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.11436170990439504,0.12545420399364277,0.10295224343225307
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,5202.183340970069,6146.478943712263,4350.117417328631
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Enteric infections,Number,2019,50303022.41816474,62643508.3172115,40031448.32725901
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Enteric infections,Percent,2019,0.09795616110512545,0.11481004592626765,0.08185222280098728
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Enteric infections,Rate,2019,4456.814357236088,5550.1732069874215,3546.7597187849287
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Other infectious diseases,Number,2019,27317821.02194338,37795557.18346103,19745066.70099939
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Other infectious diseases,Percent,2019,0.05318991793410031,0.07090466773894627,0.04013441589343311
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Other infectious diseases,Rate,2019,2420.3407884103162,3348.6612493121,1749.3997880696054
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,84078389.37627238,101495543.87458517,70619070.29689136
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.16368771891492928,0.1787887576567293,0.14905439025540132
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,7449.289424210424,8992.437738142544,6256.802698205182
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Number,2019,16174706.94209904,19049213.849539988,14370941.585577786
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Percent,2019,0.023631045881478196,0.028376921014450395,0.020492870890231857
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,HIV/AIDS and sexually transmitted infections,Rate,2019,674.9118468775608,794.8545928393926,599.6472617162085
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Respiratory infections and tuberculosis,Number,2019,28768971.385282658,31540743.116665363,26241280.678101078
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Respiratory infections and tuberculosis,Percent,2019,0.0419952339499135,0.045839052340995425,0.038477678274594716
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Respiratory infections and tuberculosis,Rate,2019,1200.4248163453312,1316.0807960825289,1094.9534523431237
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Enteric infections,Number,2019,11714299.190930896,14646029.177839529,9548279.252559721
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Enteric infections,Percent,2019,0.017084683679366684,0.021092761704790786,0.014264153395013836
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Enteric infections,Rate,2019,488.7952115688518,611.1256690599139,398.41505678689487
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Other infectious diseases,Number,2019,7100846.761381928,8451258.563006684,6018361.971747109
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Other infectious diseases,Percent,2019,0.010362829175402771,0.012318405725920394,0.008920742658123612
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Other infectious diseases,Rate,2019,296.29257700151504,352.64036285892854,251.12441344809898
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Maternal and neonatal disorders,Number,2019,32565475.464657553,37649535.04467173,28362317.73336982
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Maternal and neonatal disorders,Percent,2019,0.04754350933515275,0.05479004299100789,0.04121312520037203
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Maternal and neonatal disorders,Rate,2019,1358.8391597434195,1570.978523570287,1183.4566345888104
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Injuries,Number,2019,72079452.93422322,78729499.94719106,65412138.9226462
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Injuries,Percent,2019,0.10516332516741464,0.11089601370228364,0.09807198182944941
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Injuries,Rate,2019,3007.614102431932,3285.0964412100775,2729.4112744379368
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Nutritional deficiencies,Number,2019,18299216.98530314,23321623.39871918,14184879.759966375
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.035612772912312525,0.04367577724861667,0.02924304840683549
+DALYs (Disability-Adjusted Life Years),Low SDI,Both,All ages,Nutritional deficiencies,Rate,2019,1621.2984641023672,2066.280334676887,1256.7709201317616
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Nutritional deficiencies,Number,2019,10018417.977565892,13547618.690383688,7136818.085811106
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Nutritional deficiencies,Percent,2019,0.014544110100917667,0.018335348172461675,0.011268210951750643
+DALYs (Disability-Adjusted Life Years),Middle SDI,Both,All ages,Nutritional deficiencies,Rate,2019,418.0322403512363,565.2929839069612,297.79352988381663
