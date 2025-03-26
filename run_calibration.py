@@ -199,14 +199,14 @@ def plot_losses_to_params(losses: np.ndarray, params: np.ndarray,  options: Opti
 
 if __name__ == '__main__':
     # Calibration Parameters
-    number_of_batches = 50
-    calibration_seed = 1
-    batch_size = 10
-    ensemble_size = 5
-    # number_of_batches = 5
+    # number_of_batches = 50
     # calibration_seed = 1
-    # batch_size = 5
+    # batch_size = 10
     # ensemble_size = 5
+    number_of_batches = 5
+    calibration_seed = 1
+    batch_size = 5
+    ensemble_size = 5
 
     population_size = 10_000
     number_of_years = 81

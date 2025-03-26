@@ -38,7 +38,7 @@ def interactive_plot_of_mortality(models, sim_num_to_description, defaults: list
         all_sims_mortality = pd.concat([all_sims_mortality, model_mortality])
 
     # canada_education, health_shock_parameters, mortality = params.parse_empirical_data("./luck_vs_circumstance/datasets")
-    mortality = params.parse_mortality_data_for_four_causes("./luck_vs_circumstance/datasets")
+    mortality = params.parse_mortality_data("./luck_vs_circumstance/datasets")
     mortality['Model survivors at age x'] = (mortality['Actual survivors at age x'] / (100_000 / 10_000)).astype(int)
     real_world_mortality = mortality.iloc[:81, :]
 
@@ -77,9 +77,9 @@ def plot_inequity_mortality_curves(lvc_model, c_or_e_or_ha: str, index=None, num
     else:
         raise ValueError("c_or_e_or_ha must be 'c' or 'e' or 'ha'")
     
-    base_model_mortality = pd.read_csv("base_model_mortality.csv", index_col=0)
-    base_model_mortality['Model survivors at age x'] = base_model_mortality['Model survivors at age x'] / population_size
-    base_model_mortality['segment'] = "base_model"
+    # base_model_mortality = pd.read_csv("base_model_mortality.csv", index_col=0)
+    # base_model_mortality['Model survivors at age x'] = base_model_mortality['Model survivors at age x'] / population_size
+    # base_model_mortality['segment'] = "base_model"
 
 
     mortality = params.parse_mortality_data("./luck_vs_circumstance/datasets")
@@ -108,7 +108,7 @@ def plot_inequity_mortality_curves(lvc_model, c_or_e_or_ha: str, index=None, num
 
         all_model_mortalities = pd.concat([all_model_mortalities, model_mortality])
 
-    all_model_mortalities = pd.concat([all_model_mortalities, base_model_mortality, mortality])
+    all_model_mortalities = pd.concat([all_model_mortalities, mortality])
 
     fig = px.line(all_model_mortalities, x='age', y='Model survivors at age x', color='segment', title=f"Mortality Curves for varying levels of {c_or_e_or_ha.upper()}")
     
@@ -133,10 +133,10 @@ def distribution_of_age_of_death_stacked_by_number_of_health_shocks(lvc_model, i
 
 
     if include_neonatal_deaths:
-        return px.histogram(population[(~population.alive) & (population.age_of_death > 0)], x='age_of_death', color='number_of_health_shocks', color_discrete_sequence=px.colors.sequential.Magenta, nbins=population.age_of_death.max(), title="Age of Death by Number of Health Shocks")
+        return px.histogram(population[(~population.alive) & (population.age_of_death > 0)], x='age_of_death', color='number_of_health_shocks', color_discrete_sequence=px.colors.sequential.Magenta, nbins=int(population.age_of_death.max()), title="Age of Death by Number of Health Shocks")
         # return sns.histplot(data = population[~population.alive], x='age_of_death', hue='number_of_health_shocks', multiple='stack')
     else:
-        return px.histogram(population[(~population.alive) & (population.age_of_death > 0)], x='age_of_death', color='number_of_health_shocks', color_discrete_sequence=px.colors.sequential.Magenta, nbins=population.age_of_death.max(), title="Age of Death by Number of Health Shocks")
+        return px.histogram(population[(~population.alive) & (population.age_of_death > 0)], x='age_of_death', color='number_of_health_shocks', color_discrete_sequence=px.colors.sequential.Magenta, nbins=int(population.age_of_death.max()), title="Age of Death by Number of Health Shocks")
     
 def plot_distribution_of_scores(lvc_model, index=None):
     if not index is None:

@@ -422,8 +422,8 @@ class LvCHealthInequityModel(neworder.Model):
             if age not in model_mortality.index:
                 model_mortality.loc[age] = 0
 
-        model_mortality = model_mortality.reset_index(name='count').rename(columns={'age_of_death': 'age'})
-        print(model_mortality.columns)
+        model_mortality = model_mortality.reset_index(name='count')
+        model_mortality = model_mortality.rename(columns={'age_of_death': 'age'})
         model_mortality = model_mortality.sort_values('age', ascending=False).set_index('age').cumsum().iloc[::-1]
         model_mortality = model_mortality.rename(columns={'count': 'Model survivors at age x'}).reset_index()
         self.model_mortality = model_mortality
