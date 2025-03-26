@@ -6,6 +6,8 @@
 
 Clone this repository onto your machine.
 
+This project requires python 3.8+.
+
 We've used conda for our virtual environment. Please ensure conda is installed on your machine (see [Install Conda](https://docs.conda.io/projects/conda/en/stable/#install))
 
 The following commands are for a UNIX based operating system - and have only been tested on Linux. If you are running this on other operating systems you may encounter issues. For Windows, change "python3" to "py" when using Command Prompt. 
