@@ -10,7 +10,7 @@ This project requires python 3.8+.
 
 We've used conda for our virtual environment. Please ensure conda is installed on your machine (see [Install Conda](https://docs.conda.io/projects/conda/en/stable/#install))
 
-The following commands are for a UNIX based operating system - and have only been tested on Linux. If you are running this on other operating systems you may encounter issues. For Windows, change "python3" to "py" when using Command Prompt. 
+The following commands are for a UNIX based operating system and should be run in a terminal. For Windows, use Anaconda Prompt to run the commands. 
 
 Create a virtual environment using conda, and install the required packages, by following this command:
 
@@ -60,7 +60,7 @@ See the run_calibration.py for options that can be modified to increase or decre
 To run the calibration with the current parameters, run the following command:
 
 ```bash
-python3 run_calibration.py
+python run_calibration.py
 ```
 
 This process may take several hours to complete. If you would like to speed up the process you can change the parameters right below `if __name__ == "__main__":` line in the `run_calibration.py` script. 
@@ -72,7 +72,7 @@ Once the script is completed, see the results/calibration_results folder to find
 To run the simulations created to exlore modifications to the base model, run build_interactive_results.py file using the following command:
 
 ```bash
-python3 build_interactive_results.py
+python build_interactive_results.py
 ```
 
 The interactive results, in HTML format, can be found in the results/interactive_results folder. There are two interactive files: main_simulation_results.html, and individual_simulation_results.html.
@@ -80,7 +80,7 @@ The interactive results, in HTML format, can be found in the results/interactive
 And, to create the simulation results datasets, run the build_simulation_datasets.py file using the following command:
 
 ```bash
-python3 build_simulation_datasets.py
+python build_simulation_datasets.py
 ```
 
 ## Manuscript Figures
