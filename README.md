@@ -10,7 +10,7 @@ This project requires python 3.8+.
 
 We've used conda for our virtual environment. Please ensure conda is installed on your machine (see [Install Conda](https://docs.conda.io/projects/conda/en/stable/#install))
 
-The following commands are for a UNIX based operating system and should be run in a terminal. For Windows, use Anaconda Prompt to run the commands. 
+The following commands work on UNIX based and Windows operating systems. For UNIX based operating systems run the commands in a terminal. For Windows, use Anaconda Prompt to run the commands. 
 
 Create a virtual environment using conda, and install the required packages, by following this command:
 

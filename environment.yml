@@ -1,4 +1,4 @@
-name: final_test
+name: health_inequity_simulation
 channels:
   - defaults
 dependencies:
