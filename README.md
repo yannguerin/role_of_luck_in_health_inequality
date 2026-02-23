@@ -1,5 +1,7 @@
 # The Role of Luck in Health Inequality
 
+DOI: https://doi.org/10.5281/zenodo.18745549
+
 ## Installation
 
 ### Environment
