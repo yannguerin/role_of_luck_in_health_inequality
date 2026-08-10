@@ -14,7 +14,7 @@ import numpy as np
 import neworder
 from luck_vs_circumstance import dist, params, model
 
-Parameters = namedtuple("Parameters", ['loc', 'scale', 'health_ability_link_cobb_douglas_alpha', 'effort_type', 'shape', 'shock_probability_scaling', 'shock_probability_scaling_post_age'], defaults=[None, None])
+Parameters = namedtuple("Parameters", ['loc', 'scale', 'health_ability_link_cobb_douglas_alpha', 'annual_decay', 'a', 'b', 'c'], defaults=[None, None])
 
 def build_interface(**kwargs) -> tuple[Callable[[Sequence[float], int, None], np.ndarray], Callable[[Sequence[float], int], dict[str, Any]]]:
     """
@@ -33,7 +33,7 @@ def build_interface(**kwargs) -> tuple[Callable[[Sequence[float], int, None], np
         # annual_health_score_decay = 1/N
         
         # Indexed by theta parameter so that all parameters are integers as I do not know how to pass strings in black-it
-        effort_type_options = ['truncnorm', 'truncweibull_min', 'truncexpon']
+        # effort_type_options = ['truncnorm', 'truncweibull_min', 'truncexpon']
 
         canada_education, health_shock_parameters, mortality = params.parse_empirical_data("./luck_vs_circumstance/datasets")
         accidental_deaths = params.parse_accidental_death_data("./luck_vs_circumstance/datasets")
@@ -41,8 +41,9 @@ def build_interface(**kwargs) -> tuple[Callable[[Sequence[float], int, None], np
         circumstance_dist = dist.Circumstance_Distribution(canada_education['Circumstance_Score'],
                                                                             canada_education['Proportion'])
         
-        effort_dist = dist.Effort_Distribution({'loc': model_params.loc, 'scale': model_params.scale, 'shape': model_params.shape}, effort_type_options[int(model_params.effort_type)])
+        effort_dist = dist.Effort_Distribution({'loc': model_params.loc, 'scale': model_params.scale, 'shape': 0}, 'truncnorm')
 
+        # THIS CONDITIONAL IS FOR TESTING PURPOSES AND SHOULD NOT BE IN THE FINAL MODEL
         return {
             'population_size': population_size,
             'number_of_years': N - 1,
@@ -51,8 +52,10 @@ def build_interface(**kwargs) -> tuple[Callable[[Sequence[float], int, None], np
             'health_shock_parameters': health_shock_parameters,
             'health_ability_link_cobb_douglas_alpha': model_params.health_ability_link_cobb_douglas_alpha,
             'accidental_deaths': accidental_deaths,
-            'shock_probability_scaling': model_params.shock_probability_scaling,
-            'shock_probability_scaling_post_age': model_params.shock_probability_scaling_post_age,
+            'annual_health_score_decay': model_params.annual_decay,
+            'a': model_params.a,
+            'b': model_params.b,
+            'c': model_params.c,
             **kwargs
         }
     

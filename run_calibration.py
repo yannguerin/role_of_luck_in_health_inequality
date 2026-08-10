@@ -26,9 +26,9 @@ from black_it.samplers.halton import HaltonSampler
 from black_it.samplers.random_forest import RandomForestSampler
 from black_it.samplers.best_batch import BestBatchSampler
 
-from luck_vs_circumstance.black_it_interface import build_interface, Parameters
+from black_it_interface import build_interface, Parameters
 
-def plot_model_results(real_data: np.ndarray, model_data: np.ndarray, params: Parameters, title: Optional[str] = "Real Mortality vs. Model Mortality", options: Optional[dict[str, bool] | None] = None, fname: Optional[str | None] = None) -> None:
+def plot_model_results(real_data: np.ndarray, model_data: np.ndarray, params: RevisionParameters, title: Optional[str] = "Real Mortality vs. Model Mortality", options: Optional[dict[str, bool] | None] = None, fname: Optional[str | None] = None) -> None:
     """
     Line plots of the mortality data of the model vs. the real data.
     """
@@ -55,9 +55,9 @@ def plot_model_results(real_data: np.ndarray, model_data: np.ndarray, params: Pa
     params_to_label = [key for key, val in params_dict.items() if val != None]
     
     # Changing the effort_type parameter from a float to the string that the float represents
-    effort_type_options = ['truncnorm', 'truncweibull_min', 'truncexpon']
-    effort_type_label = effort_type_options[int(params.effort_type)]
-    params_dict['effort_type'] = effort_type_label
+    # effort_type_options = ['truncnorm', 'truncweibull_min', 'truncexpon']
+    # effort_type_label = effort_type_options[0]
+    # params_dict['effort_type'] = effort_type_label
 
     # rounding values like 2.7000000000000004
     formatted_params_dict = {key: round(val, 2) if val != None and not isinstance(val, str) else val for key, val in params_dict.items()}
@@ -75,7 +75,7 @@ def plot_model_results(real_data: np.ndarray, model_data: np.ndarray, params: Pa
             options = {'no_options_selected': True}
         options_string = '_'.join([opt for opt, val in options.items() if val])
         fname = f'real_vs_model_mortality_using_{options_string}'
-    plt.savefig(f"./results/calibration_results/{fname}.png", bbox_inches='tight')
+    plt.savefig(f"./analyses/{fname}.png", bbox_inches='tight')
 
     plt.cla()
     plt.clf()
@@ -134,7 +134,7 @@ def plot_individuals_in_the_population(sample_population_over_time: pd.DataFrame
     fig.legend(custom_legend_lines, shock_causes, loc='upper right', title='Shock Causes', handleheight=3, handlelength=5)
 
     fname = f'health_scores_over_time_for_sample_of_population_using_{options_string}'
-    plt.savefig(f"./results/calibration_results/{fname}.png")
+    plt.savefig(f"./analyses/{fname}.png")
 
     plt.cla()
     plt.clf()
@@ -159,7 +159,7 @@ def plot_distribution_values(population_df: pd.DataFrame, options: Optional[dict
     # Circumstance
     fig = sns.histplot(data=population_df, x='circumstance_score').set(title='Histogram of Circumstance Scores in the population')
     fname = f'circumstance_scores_using_{options_string}'
-    plt.savefig(f"./results/calibration_results/{fname}.png")
+    plt.savefig(f"./analyses/{fname}.png")
 
     plt.cla()
     plt.clf()
@@ -167,7 +167,7 @@ def plot_distribution_values(population_df: pd.DataFrame, options: Optional[dict
     # Effort
     fig = sns.histplot(data=population_df, x='effort_score').set(title='Histogram of Effort Scores in the population')
     fname = f'effort_scores_using_{options_string}'
-    plt.savefig(f"./results/calibration_results/{fname}.png")
+    plt.savefig(f"./analyses/{fname}.png")
 
     plt.cla()
     plt.clf()
@@ -191,7 +191,7 @@ def plot_losses_to_params(losses: np.ndarray, params: np.ndarray,  options: Opti
 
     fname = f"losses_to_params_{options_string}"
 
-    plt.savefig(f"./results/calibration_results/{fname}.png", bbox_inches="tight")
+    plt.savefig(f"./analyses/{fname}.png", bbox_inches="tight")
 
     plt.cla()
     plt.clf()
@@ -199,11 +199,7 @@ def plot_losses_to_params(losses: np.ndarray, params: np.ndarray,  options: Opti
 
 if __name__ == '__main__':
     # Calibration Parameters
-    # number_of_batches = 50
-    # calibration_seed = 1
-    # batch_size = 10
-    # ensemble_size = 5
-    number_of_batches = 5
+    number_of_batches = 50
     calibration_seed = 1
     batch_size = 5
     ensemble_size = 5
@@ -224,18 +220,11 @@ if __name__ == '__main__':
     # accidental death data
     accidental_deaths = lvc.params.parse_accidental_death_data("luck_vs_circumstance/datasets")
 
-    # Parameters when using different shock probability scaling for pre age 50 and post age 50
-    # In order: loc, scale, health_ability_link_cobb_douglas_alpha, effort_type, shape, shock_probability_scaling
-    bounds = [[0.4, 0.1, 0.4, 0, 0.1, 1., 1.], [0.6, 1.0, 0.6, 2, 1.0, 2.0, 2.0]]
+    # In order: loc, scale, health_ability_link_cobb_douglas_alpha, annual_decay, a, b, c
+    bounds = [[0.2, 0.1, 0.2, 0.002, 0.8, 50, 0.020], [0.6, 1.0, 0.6, 0.005, 1.2, 100, 0.06]]
     # Precision steps to explore
-    precisions = [0.01, 0.1, 0.01, 1, 0.1, 0.1, 0.1]
+    precisions = [0.01, 0.1, 0.01, 0.0002, 0.1, 5, 0.001]
 
-    # bounds = [[0, 0, 0], [1.1, 1.1, 1.1]]
-    # # Precision steps to explore
-    # precisions = [0.1, 0.1, 0.1]
-
-    bounds = [bounds[0][:-1], bounds[1][:-1]]
-    precisions = precisions[:-1]
 
     options = {'accidental_deaths': accidental_deaths, 'custom_unequal_health_score': 0.9, "neonatal_deaths": True}
 
