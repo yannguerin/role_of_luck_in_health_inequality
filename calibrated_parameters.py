@@ -9,7 +9,7 @@ Parameters = namedtuple("Parameters", ['loc', 'scale', 'health_ability_link_cobb
 
 # Update the Parameters named tuple after running the calibration
 
-# Parameters from calibration on updated datasets
-# Date: January 23rd 2025
-# ran with accidental deaths and neonatal deaths
-base_model_parameters = Parameters(loc=0.6, scale=0.1, health_ability_link_cobb_douglas_alpha=0.58, effort_type=0.0, shape=1.0, shock_probability_scaling=1.0)
+# Parameters from calibration on decay (gompertz and annual) for paper revision with bugs fixed
+# Date: July 24th 2026
+# ran with accidental and neonatal deaths
+base_model_parameters = Parameters(loc=0.54, scale=0.5, health_ability_link_cobb_douglas_alpha=0.23, effort_type=0.0, shape=1.0, shock_probability_scaling=1.0)

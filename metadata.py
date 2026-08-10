@@ -7,7 +7,7 @@
 
 # These are the options passed to the model as kwargs
 simulation_options = {
-    "Pure luck model": {"custom_unequal_health_score": 0.9, "equal_circumstance": True, "equal_effort": True, "uniform_probability_of_taking_shock": True},
+    "Pure luck model": {"custom_unequal_health_score": 0.9, "equal_circumstance": True, "equal_effort": True},
     "Mediumly correlated luck model": {"custom_unequal_health_score": 0.9}, # is the same as the base model
     "Highly correlated luck model": {"custom_unequal_health_score": 0.9, "shock_probability_inversely_proportional_to_health_ability": True},
     "Deterministic model": {"custom_unequal_health_score": 0.9, "deterministic_shocks": True},
