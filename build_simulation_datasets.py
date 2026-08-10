@@ -1,12 +1,7 @@
-# -------------------------------------------------------- #
-# Script to generate cross sectional population and
-# population over time datasets for all simulation models.
+# Script to generate cross sectional population and population over time datasets for all simulation models
 # For use in health inequity calculations and analyses
-#
 # Date: July 4th 2024
 # Author: Yann Guerin
-# -------------------------------------------------------- #
-
 
 import pathlib
 
@@ -14,17 +9,13 @@ import neworder
 
 from luck_vs_circumstance import dist, params
 from luck_vs_circumstance.model import LvCHealthInequityModel
-from interactive_plotting import *
-from metadata import *
+from interactive_plotting import build_cross_sectional_datasets
+from metadata import simulation_options, simulation_num_to_description_mapping
 from calibrated_parameters import base_model_parameters
 
 
 def main():
     models = {}
-
-    # ------------------------------- #
-    # Setting up the Model Parameters #
-    # ------------------------------- #
 
     population_size = 10000
     number_of_years = 80
@@ -39,11 +30,8 @@ def main():
 
     effort_dist = dist.Effort_Distribution({'loc': base_model_parameters.loc, 'scale': base_model_parameters.scale, 'shape': base_model_parameters.shape}, effort_type_options[int(base_model_parameters.effort_type)])
 
-    # ------------------ #
-    # Running the Models #
-    # ------------------ # 
-
     for sim_num in simulation_num_to_description_mapping.keys():
+        print(sim_num)
 
         sim_params =  {
             'population_size': population_size,
@@ -55,6 +43,7 @@ def main():
             'shock_probability_scaling': base_model_parameters.shock_probability_scaling,
             'shock_probability_scaling_post_age': base_model_parameters.shock_probability_scaling_post_age,
             'accidental_deaths': accidental_deaths,
+            'neonatal_deaths': True,
             **simulation_options[sim_num],
             'inspect': True
         }
@@ -64,30 +53,23 @@ def main():
 
         models[sim_num] = lvc_model
 
-    # ------------------------------------- #
-    # Creatinh the cross sectional datasets #
-    # ------------------------------------- #
-
     cross_sectional_dfs = build_cross_sectional_datasets(models, alive_only=True)
     cross_sectional_dfs_dead_included = build_cross_sectional_datasets(models, alive_only=False)
 
-    # ------------------ #
-    # Saving the Results #
-    # ------------------ #
-
+    
     for sim_num in models.keys():
-        dataset_results_path = pathlib.Path(f"./results/simulation_datasets/{sim_num}/")
+        dataset_results_path = pathlib.Path(f"./cross_sectional_datasets/{sim_num}/")
         if not dataset_results_path.exists():
             dataset_results_path.mkdir()
 
         dataset = cross_sectional_dfs[sim_num][['id', 'health_score', 'circumstance_score', 'effort_score', 'time_bin']]
-        dataset.to_csv(f"./results/simulation_datasets/{sim_num}/cross_sectional_population.csv")
+        dataset.to_csv(f"./cross_sectional_datasets/{sim_num}/cross_sectional_population.csv")
 
         dataset_dead_included = cross_sectional_dfs_dead_included[sim_num][['id', 'health_score', 'circumstance_score', 'effort_score', 'time_bin']]
-        dataset_dead_included.to_csv(f"./results/simulation_datasets/{sim_num}/cross_sectional_population_dead_included.csv")
+        dataset_dead_included.to_csv(f"./cross_sectional_datasets/{sim_num}/cross_sectional_population_dead_included.csv")
         
-        models[sim_num].population.to_csv(f"./results/simulation_datasets/{sim_num}/population.csv")
-        models[sim_num].population_over_time.to_csv(f"./results/simulation_datasets/{sim_num}/population_over_time.csv")
+        models[sim_num].population.to_csv(f"./cross_sectional_datasets/{sim_num}/population.csv")
+        models[sim_num].population_over_time.to_csv(f"./cross_sectional_datasets/{sim_num}/population_over_time.csv")
 
 if __name__ == '__main__':
     main()
