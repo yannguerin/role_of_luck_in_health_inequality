@@ -1,9 +1,7 @@
 import luck_vs_circumstance as lvc
 import pandas as pd
 import numpy as np
-import scipy
 import neworder
-from utils import min_max, linear_scale
 
 class LvCHealthInequityModel(neworder.Model):
     """
@@ -34,67 +32,19 @@ class LvCHealthInequityModel(neworder.Model):
         
         self.use_both = kwargs.get("use_both", True)
 
-        # For health score decay using only gompertz deductions (if use_both is False)
-        self.use_gompertz = kwargs.get("use_gompertz", False)
-
         # The annual health score decay to apply if use_both == True
         self.annual_health_score_decay = kwargs.get("annual_health_score_decay", 0.0046)
-        # self.annual_health_score_decay = kwargs.get("annual_health_score_decay", 1/500)
 
-        # The parameters for the Gompertz function if passed
-        
-        # This first set are the original parameters from Michel Grignon
-        # self.a = kwargs.get("a", 1)
-        # self.b = kwargs.get("b", 77)
-        # self.c = kwargs.get("c", 0.038)
-
-        # This second set are the parameters that were calibrated, but there was a bug in that model 
-        # self.a = kwargs.get("a", 1.1)
-        # self.b = kwargs.get("b", 80)
-        # self.c = kwargs.get("c", 0.027)
-
-        # These are the newest and are calibrated with a bug fixed
+        # The parameters for the Gompertz function
         self.a = kwargs.get("a", 1.1)
         self.b = kwargs.get("b", 90)
         self.c = kwargs.get("c", 0.025)
-
-
-        # For combining the circumstance and effort scores. 
-        # Though, since the introduction of the Cobb Douglas Production function,
-        # this parameter is no longer used.
-        health_ability_link_function = kwargs.get("health_ability_link_function", None)
-
-        # An old exploratory parameter for treating the Gompertz values as a probability of death
-        self.use_qx = kwargs.get("use_qx", False)
-
-        # Scales the 'a' parameter of the Gompertz function (note: it is always applied, hence 1 as the default)
-        self.gompertz_scaling = kwargs.get("gompertz_scaling", 1)
- 
-        self.shock_probability_conditional_on_effort = kwargs.get("shock_probability_conditional_on_effort", False)
-        self.shock_probability_conditional_on_circumstance = kwargs.get("shock_probability_conditional_on_circumstance", False)
-        self.shock_probability_conditional_on_health_ability = kwargs.get("shock_probability_conditional_on_health_ability", False)
-        self.unequal_health_score = kwargs.get("unequal_health_score", False)
-        self.slightly_unequal_health_score = kwargs.get("slightly_unequal_health_score", False)
         self.custom_unequal_health_score = kwargs.get("custom_unequal_health_score", 0.9)
-        self.taking_shock_determined_by_health_score = kwargs.get("taking_shock_determined_by_health_score", False)
-        self.shock_magnitude_influenced_by_health_ability = kwargs.get("shock_magnitude_influenced_by_health_ability", False)
-        self.compounded_shock_probability_exp = kwargs.get("compounded_shock_probability_exp", False)
-        self.compounded_shock_probability_prod = kwargs.get("compounded_shock_probability_prod", False)
         self.shock_probability_inversely_proportional_to_health_ability = kwargs.get("shock_probability_inversely_proportional_to_health_ability", False)
-        self.triangular_l_take = kwargs.get("triangular_l_take", False)
 
-        # Deterministic Model and its variants
+        # Deterministic Model
         self.deterministic_shocks = kwargs.get("deterministic_shocks", False)
-        self.deterministic_encounters = kwargs.get("deterministic_encounteres", False)
-        self.deterministic_taken = kwargs.get("deterministic_taken", False)
-        self.deterministic_magnitude = kwargs.get("deterministic_magnitude", False)
  
-        # Extras, not currently used for anything
-        self.random_health_score = kwargs.get("random_health_score", False)
-        self.modified_shock_magnitude = kwargs.get("modified_shock_magnitude", False)
-        self.uniform_probability_of_taking_shock = kwargs.get("uniform_probability_of_taking_shock", False)
-        self.random_circumstance = kwargs.get("random_circumstance", False)
-
         # Accidental Deaths
         self.accidental_deaths = kwargs.get("accidental_deaths", pd.DataFrame())
 
@@ -111,17 +61,10 @@ class LvCHealthInequityModel(neworder.Model):
         self.population_size = population_size
         self.number_of_years = number_of_years
         self.health_shock_parameters = health_shock_parameters.copy(deep=True)
-        self.health_shock_parameters['Shock Probability'] *= kwargs.get("shock_probability_scaling", 1) # type: ignore
-        # For age dependant shock probability scaling
-        self.shock_probability_scaling_pre_50 = kwargs.get("shock_probability_scaling", 1)
-        self.shock_probability_scaling_post_50 = kwargs.get("shock_probability_scaling_post_age", 1)
-        # self.annual_health_score_decay = annual_health_score_decay
 
         # health_ability is a product of circumstance and effort
         if kwargs.get("equal_circumstance"):
             circumstance_values = np.array([circumstance_dist.draw(population_size).mean()] * population_size)
-        elif self.random_circumstance:
-            circumstance_values = np.random.uniform(low=0, high=1, size=population_size)
         else:
             circumstance_values = circumstance_dist.draw(population_size)
         if kwargs.get("equal_effort"):
@@ -129,25 +72,10 @@ class LvCHealthInequityModel(neworder.Model):
         else:
             effort_values = effort_dist.draw(population_size)
 
+        health_ability = (effort_values**health_ability_link_cobb_douglas_alpha) * (circumstance_values**(1-health_ability_link_cobb_douglas_alpha))    
 
-        # cobb_douglas link function
-        if not health_ability_link_function:
-            health_ability = (effort_values**health_ability_link_cobb_douglas_alpha) * (circumstance_values**(1-health_ability_link_cobb_douglas_alpha))    
-        elif health_ability_link_function == 'mean':
-            health_ability = np.mean(np.vstack([effort_values, circumstance_values]), axis=0)
-        elif health_ability_link_function == 'median':
-            health_ability = np.median(np.vstack([effort_values, circumstance_values]), axis=0)
-        else:
-            raise ValueError("health_ability_link_functions must be one of: [mean, median]")
-
-        if self.unequal_health_score:
-            health_score = 0.5 + (circumstance_values / 2)
-        elif self.slightly_unequal_health_score:
-            health_score = 0.99 + (circumstance_values / 100)
-        elif self.custom_unequal_health_score:
+        if self.custom_unequal_health_score:
             health_score = self.custom_unequal_health_score + (circumstance_values / (1 / (1 - self.custom_unequal_health_score)))
-        elif self.random_health_score:
-            health_score = np.random.uniform(low=0.6, high=1.0, size=population_size)
         else:
             health_score = 1.0 
 
@@ -186,26 +114,6 @@ class LvCHealthInequityModel(neworder.Model):
         if self.use_both:
             self.population.loc[self.population['alive'], 'health_score'] -= self._gompertz_health_decay(a=self.a, b=self.b, c=self.c) + self.annual_health_score_decay
             self.population.loc[self.population['alive'], 'unshocked_health_score'] -= self._gompertz_health_decay(a=self.a, b=self.b, c=self.c) + self.annual_health_score_decay
-        elif self.use_gompertz:
-            # decay health_scores by gompertz distribution
-            self.population.loc[self.population['alive'], 'health_score'] -= self._gompertz_health_decay() #  + self.annual_health_score_decay
-            self.population.loc[self.population['alive'], 'unshocked_health_score'] -= self._gompertz_health_decay() #  + self.annual_health_score_decay
-        elif self.use_qx:
-            # decay health_scores by gompertz distribution
-            val = self._gompertz_health_decay()
-            self.population.loc[self.population['alive'], 'health_score'] -= self._gompertz_health_decay() #  + self.annual_health_score_decay
-            self.population.loc[self.population['alive'], 'unshocked_health_score'] -= self._gompertz_health_decay() #  + self.annual_health_score_decay
-            # Create random number between [0, 1) for each person in the population
-            # There may be a slight issue here where the precision of the random numbers is too small to ever return a value of to kill for gompertz values at early times in the timeline
-            # which would lead to too few people dying early on, which can be seen in the plots created using this option
-            # though, the error in the plot could also be due to the gompertz being an approximation of the mortality curve
-            random_nums = pd.Series(np.random.rand(self.population.index.size), index=self.population.index)
-            # Bool depending on if the random number of less than or equal to the gompertz value at this time
-            to_kill = random_nums <= val
-            # If the random num is less and or equal to, then kill that person
-            if to_kill.any():
-                self.population.loc[to_kill[to_kill].index, 'health_score'] = 0
-                self.population.loc[to_kill[to_kill].index, 'unshocked_health_score'] = 0
         else:
             self.population.loc[self.population['alive'], 'health_score'] -= self.annual_health_score_decay
             self.population.loc[self.population['alive'], 'unshocked_health_score'] -= self.annual_health_score_decay
@@ -255,11 +163,6 @@ class LvCHealthInequityModel(neworder.Model):
         if alive_pop.empty:
             return
         
-        # shock probability scaling dependant on age
-        age_dependant_shock_probability_scaling_factor = None
-        if self.shock_probability_scaling_pre_50 and self.shock_probability_scaling_post_50:            
-            age_dependant_shock_probability_scaling_factor = self.shock_probability_scaling_pre_50 if self.timeline.time <= 50 else self.shock_probability_scaling_post_50
-
         for ix, shock in age_specific_health_shocks.iterrows():
             # only shock individuals that are alive and have not taken single-hit hits before
             if shock['Shock Type'] == 'single-hit':
@@ -269,50 +172,16 @@ class LvCHealthInequityModel(neworder.Model):
             else:
                 shock_possible_pop = alive_pop
 
-            # scaling the shock probability if the age dependant scaling factor is defined
-            if age_dependant_shock_probability_scaling_factor:
-                shock['Shock Probability'] *= age_dependant_shock_probability_scaling_factor
-
-
+            # ---------- #
+            # Encounters #
+            # ---------- #
             if self.shock_probability_inversely_proportional_to_health_ability:
                 inverse_health_ability = 1 / shock_possible_pop.health_ability
                 shock_probability_by_individual = (inverse_health_ability - inverse_health_ability.mean() + 1).to_numpy()
                 vals = [shock['Shock Probability'] * shock_prob if (shock['Shock Probability'] * shock_prob) <= 1 else 1 for shock_prob in shock_probability_by_individual]
                 encountered = np.array([self.mc.hazard(val, 1)[0] if val > 0 else 0 for val in vals]).astype(bool)
-            # scaling the shock probability for scenarios with unequal shock probability conditional on cirucmstance or effort or health ability
-            elif self.shock_probability_conditional_on_health_ability:
-                centered_health_ability_values = (shock_possible_pop['health_ability'] - shock_possible_pop['health_ability'].mean())
-                # Added replace to remove the np.inf vals that show up when dividing by zero
-                unsquashed_shock_probabilities = (1 / centered_health_ability_values).replace(np.inf, 0) * shock["Shock Probability"]
-                shock_probability_by_individual = scipy.special.expit(list(unsquashed_shock_probabilities)) * 0.01
-                encountered = np.array([self.mc.hazard(shock_prob, 1)[0] for shock_prob in shock_probability_by_individual]).astype(bool)
-            elif self.shock_probability_conditional_on_circumstance:
-                centered_circumstance_values = (shock_possible_pop['circumstance_score'] - shock_possible_pop['circumstance_score'].mean())
-                # Added replace to remove the np.inf vals that show up when dividing by zero
-                unsquashed_shock_probabilities = (1 / centered_circumstance_values).replace(np.inf, 0) * shock["Shock Probability"]
-                if self.unequal_health_score:
-                    shock_probability_by_individual = scipy.special.expit(list(unsquashed_shock_probabilities)) * 0.01
-                else:
-                    shock_probability_by_individual = scipy.special.expit(list(unsquashed_shock_probabilities)) * 0.01
-                encountered = np.array([self.mc.hazard(shock_prob, 1)[0] for shock_prob in shock_probability_by_individual]).astype(bool)
-                # encountered = self.mc.hazard(np.array(shock_probability_by_individual), len(shock_possible_pop)).astype(bool)
-            elif self.shock_probability_conditional_on_effort:
-                centered_effort_values = (shock_possible_pop['effort_score'] - shock_possible_pop['effort_score'].mean())
-                # Added replace to remove the np.inf vals that show up when dividing by zero
-                unsquashed_shock_probabilities = (1 / centered_effort_values).replace(np.inf, 0) * shock["Shock Probability"]
-                shock_probability_by_individual = scipy.special.expit(list(unsquashed_shock_probabilities)) * 0.01                
-                encountered = np.array([self.mc.hazard(shock_prob, 1)[0] for shock_prob in shock_probability_by_individual]).astype(bool)
-                # encountered = self.mc.hazard(np.array(shock_probability_by_individual), len(shock_possible_pop)).astype(bool)
-            elif self.deterministic_shocks or self.deterministic_encounters:
+            elif self.deterministic_shocks:
                 encountered = sum(self.mc.hazard(shock['Shock Probability'], len(shock_possible_pop)).astype(bool))
-            elif self.compounded_shock_probability_exp:
-                num_shocks_per_agent = [len(self.shocks_taken_data[x]['shocks']) for x in shock_possible_pop.index]
-                shock_probability_by_individual = [shock['Shock Probability'] ** (1 / (num_shocks + 1)) for num_shocks in num_shocks_per_agent]
-                encountered = np.array([self.mc.hazard(shock_prob, 1)[0] for shock_prob in shock_probability_by_individual]).astype(bool)
-            elif self.compounded_shock_probability_prod:
-                num_shocks_per_agent = [len(self.shocks_taken_data[x]['shocks']) for x in shock_possible_pop.index]
-                shock_probability_by_individual = [shock['Shock Probability'] * (num_shocks + 1) for num_shocks in num_shocks_per_agent]
-                encountered = np.array([self.mc.hazard(shock_prob, 1)[0] for shock_prob in shock_probability_by_individual]).astype(bool)
             else:
                 # determine if eligible individuals are exposed to shock with the incidence probability of that shock
                 encountered = self.mc.hazard(shock['Shock Probability'], len(shock_possible_pop)).astype(bool)
@@ -320,15 +189,14 @@ class LvCHealthInequityModel(neworder.Model):
             if self.inspect:
                 self.mc_hazard_vals.append((self.timeline.time, encountered.sum(), shock['Shock Probability'], shock['cause'], len(shock_possible_pop)))
             
-            if self.deterministic_shocks or self.deterministic_encounters:
+            if self.deterministic_shocks:
                 # Getting encountered number of individuals with the lowest health scores for deterministic shocks
                 encountered_shock = shock_possible_pop.sort_values(by='health_score', ascending=True).iloc[:encountered, :]
             else:
                 encountered_shock = shock_possible_pop[encountered]
 
-            #neworder.log(f"Individuals encountering shock {shock['cause']}: {encountered_shock.index}")
             # determine if they actually take a shock based on their health ability
-            if self.deterministic_shocks or self.deterministic_taken:
+            if self.deterministic_shocks:
                 # For the deterministic model I think the best approach to making this deterministic
                 # is to take the bottom % of the mean of health abilities in the encountered population
                 mean_health_ability = encountered_shock['health_ability'].mean()
@@ -337,13 +205,6 @@ class LvCHealthInequityModel(neworder.Model):
                 else:
                     num_taken = 0
                 taken_shock = encountered_shock.iloc[:num_taken, :]
-            elif self.taking_shock_determined_by_health_score:
-                taken_shock = encountered_shock[encountered_shock['health_score'] <= np.random.random(len(encountered_shock))]
-            elif self.triangular_l_take:
-                triangular_health_abilities = encountered_shock['health_ability'].copy()
-                triangular_health_abilities.loc[triangular_health_abilities[triangular_health_abilities < triangular_health_abilities.mean()].index] = 1 - triangular_health_abilities[triangular_health_abilities < triangular_health_abilities.mean()]
-                encountered_shock['health_ability'] = triangular_health_abilities.copy()
-                taken_shock = encountered_shock[encountered_shock['health_ability'] <= np.random.random(len(encountered_shock))]
             else:
                 taken_shock = encountered_shock[encountered_shock['health_ability'] <= np.random.random(len(encountered_shock))]
 
@@ -355,8 +216,6 @@ class LvCHealthInequityModel(neworder.Model):
                 self.taken_shock_ids.extend(list(taken_shock.index))
                 self.shock_causes.extend([shock['cause']] * len(encountered_shock.index))
 
-            #neworder.log(f"Individuals taking shock {shock['cause']}: {taken_shock.index}")
-
             # Skip the rest of the iteration if there are no shocks taken
             if len(taken_shock) <= 0:
                 continue
@@ -365,29 +224,18 @@ class LvCHealthInequityModel(neworder.Model):
             shock_magnitudes = np.random.uniform(low=shock['Disability Weights'][0],
                                                  high=shock['Disability Weights'][1],
                                                  size=len(taken_shock))
-            #neworder.log(f"Shock magnitudes: {shock_magnitudes}")
 
             # Sorting the shock magnitudes and the taken shock dataframe
             # so that the highest shock magnitude gets applied to the individual with the lowest health score
-            if self.deterministic_shocks or self.deterministic_magnitude:
+            if self.deterministic_shocks:
                 shock_magnitudes = np.linspace(shock['Disability Weights'][0], shock['Disability Weights'][1], len(taken_shock))
                 taken_shock = taken_shock.sort_values(by='health_score', ascending=False)   
-            elif self.shock_magnitude_influenced_by_health_ability and len(taken_shock) > 1:
-                norm_uniform_magnitudes = min_max(shock_magnitudes)
-                # norm_health_abilities = lvc.utils.min_max(taken_shock.health_abilities.to_numpy())
-                norm_health_abilities = taken_shock.health_ability.to_numpy()
-                norm_shock_magnitudes = ((1 - norm_health_abilities) / 2) + (norm_uniform_magnitudes / 2)
-                shock_magnitudes = linear_scale(norm_shock_magnitudes, high=shock['Disability Weights'][1], low=shock['Disability Weights'][0])
 
             for positional_index, index_key in enumerate(taken_shock.index):
                 # append shock name to shocks list
                 # append shock magnitudes to shocks_magnitudes list
                 self.shocks_taken_data[index_key]['shocks'].append(shock['cause'])
-                if self.modified_shock_magnitude and self.timeline.time <= 50:
-                    # magnitude = (shock_magnitudes[positional_index] / 2) * (1/self.population.loc[index_key, 'health_ability']) / 2 #  * (self.population.loc[index_key, 'health_score'] * (self.number_of_years - self.timeline.time) * 0.8) #  * age_scaling #  * (((self.number_of_years - 1) - self.timeline.time) / (self.number_of_years/2))
-                    magnitude = (shock_magnitudes[positional_index] / 2) * (1/self.population.loc[index_key, 'health_ability']) / ((1/3.5*(-np.sqrt((-self.timeline.time + self.number_of_years))) + 4))
-                else:
-                    magnitude = shock_magnitudes[positional_index]
+                magnitude = shock_magnitudes[positional_index]
 
                 if len(self.shocks_taken_data[index_key]['shocks']) > 1:
                     self.shocks_taken_data[index_key]['shock_magnitudes'].append(1 - magnitude)
@@ -424,7 +272,6 @@ class LvCHealthInequityModel(neworder.Model):
     def _gompertz_health_decay(self, a: int = 1, b: int = 77, c: float = 0.041) -> float:
         # From Michel
         # 1, 77, 0.041
-        a = self.gompertz_scaling
         return a*np.exp(-b*np.exp(-c*(self.timeline.time)))
         
     def finalise(self) -> None:
