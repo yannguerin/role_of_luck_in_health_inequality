@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import scipy
 import neworder
-from .utils import *
+from utils import min_max, linear_scale
 
 class LvCHealthInequityModel(neworder.Model):
     """
@@ -24,9 +24,7 @@ class LvCHealthInequityModel(neworder.Model):
                  circumstance_dist: lvc.dist.Circumstance_Distribution,
                  effort_dist: lvc.dist.Effort_Distribution,
                  health_shock_parameters: pd.DataFrame,
-                 health_ability_link_cobb_douglas_alpha: float,
-                 shock_probability_scaling: float | None,
-                 shock_probability_scaling_post_age: float | None, 
+                 health_ability_link_cobb_douglas_alpha: float, 
                  **kwargs
                 ) -> None:
         """
@@ -34,18 +32,44 @@ class LvCHealthInequityModel(neworder.Model):
         super().__init__(neworder.LinearTimeline(0, number_of_years, number_of_years),
                          neworder.MonteCarlo.nondeterministic_stream)
         
-        # ------------- #
-        # MODEL OPTIONS #
-        # ------------- #
-
-        # For health score decay using only gompertz deductions
-        self.use_gompertz = kwargs.get("use_gompertz", False)
-        # For health score decay using only annual linear deductions
-        self.annual_health_score_decay = kwargs.get("annual_health_score_decay", 1/500)
-        health_ability_link_function = kwargs.get("health_ability_link_function", None)
         self.use_both = kwargs.get("use_both", True)
+
+        # For health score decay using only gompertz deductions (if use_both is False)
+        self.use_gompertz = kwargs.get("use_gompertz", False)
+
+        # The annual health score decay to apply if use_both == True
+        self.annual_health_score_decay = kwargs.get("annual_health_score_decay", 0.0046)
+        # self.annual_health_score_decay = kwargs.get("annual_health_score_decay", 1/500)
+
+        # The parameters for the Gompertz function if passed
+        
+        # This first set are the original parameters from Michel Grignon
+        # self.a = kwargs.get("a", 1)
+        # self.b = kwargs.get("b", 77)
+        # self.c = kwargs.get("c", 0.038)
+
+        # This second set are the parameters that were calibrated, but there was a bug in that model 
+        # self.a = kwargs.get("a", 1.1)
+        # self.b = kwargs.get("b", 80)
+        # self.c = kwargs.get("c", 0.027)
+
+        # These are the newest and are calibrated with a bug fixed
+        self.a = kwargs.get("a", 1.1)
+        self.b = kwargs.get("b", 90)
+        self.c = kwargs.get("c", 0.025)
+
+
+        # For combining the circumstance and effort scores. 
+        # Though, since the introduction of the Cobb Douglas Production function,
+        # this parameter is no longer used.
+        health_ability_link_function = kwargs.get("health_ability_link_function", None)
+
+        # An old exploratory parameter for treating the Gompertz values as a probability of death
         self.use_qx = kwargs.get("use_qx", False)
+
+        # Scales the 'a' parameter of the Gompertz function (note: it is always applied, hence 1 as the default)
         self.gompertz_scaling = kwargs.get("gompertz_scaling", 1)
+ 
         self.shock_probability_conditional_on_effort = kwargs.get("shock_probability_conditional_on_effort", False)
         self.shock_probability_conditional_on_circumstance = kwargs.get("shock_probability_conditional_on_circumstance", False)
         self.shock_probability_conditional_on_health_ability = kwargs.get("shock_probability_conditional_on_health_ability", False)
@@ -87,14 +111,11 @@ class LvCHealthInequityModel(neworder.Model):
         self.population_size = population_size
         self.number_of_years = number_of_years
         self.health_shock_parameters = health_shock_parameters.copy(deep=True)
-        self.health_shock_parameters['Shock Probability'] *= shock_probability_scaling # type: ignore
+        self.health_shock_parameters['Shock Probability'] *= kwargs.get("shock_probability_scaling", 1) # type: ignore
         # For age dependant shock probability scaling
-        self.shock_probability_scaling_pre_50 = shock_probability_scaling
-        self.shock_probability_scaling_post_50 = shock_probability_scaling_post_age
-
-        # --------------------------------- #
-        # CREATING THE POPULATION DATAFRAME #
-        # --------------------------------- #
+        self.shock_probability_scaling_pre_50 = kwargs.get("shock_probability_scaling", 1)
+        self.shock_probability_scaling_post_50 = kwargs.get("shock_probability_scaling_post_age", 1)
+        # self.annual_health_score_decay = annual_health_score_decay
 
         # health_ability is a product of circumstance and effort
         if kwargs.get("equal_circumstance"):
@@ -107,6 +128,7 @@ class LvCHealthInequityModel(neworder.Model):
             effort_values = np.array([effort_dist.draw(population_size).mean()] * population_size)
         else:
             effort_values = effort_dist.draw(population_size)
+
 
         # cobb_douglas link function
         if not health_ability_link_function:
@@ -141,16 +163,14 @@ class LvCHealthInequityModel(neworder.Model):
         self.shocks_taken_data = {id: {'shocks': [], 'shock_magnitudes': []} for id in self.population.index}
         self.population.index.name = "id"
 
-        # ------------------------ #
-        # IMPOSING NEONATAL DEATHS #
-        # ------------------------ #
-
         if self.neonatal_deaths:
             # add neonatal mortality fixed % randomly dying
             # from https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310071301&pickMembers%5B0%5D=1.1&cubeTimeFrame.startYear=2019&cubeTimeFrame.endYear=2019&referencePeriods=20190101%2C20190101
             neonatal_deaths = self.population.sample(int(population_size / 1000 * 4.4))
             self.population.loc[neonatal_deaths.index, "alive"] = False
             self.population.loc[neonatal_deaths.index, "age_of_death"] = 0
+            self.population.loc[neonatal_deaths.index, "health_score"] = 0
+            self.population.loc[neonatal_deaths.index, "unshocked_health_score"] = 0
             self.neonatal_death_ids = neonatal_deaths.index
 
     def step(self) -> None:
@@ -164,8 +184,8 @@ class LvCHealthInequityModel(neworder.Model):
         self.impose_health_shock()
 
         if self.use_both:
-            self.population.loc[self.population['alive'], 'health_score'] -= (self._gompertz_health_decay() + self.annual_health_score_decay)
-            self.population.loc[self.population['alive'], 'unshocked_health_score'] -= (self._gompertz_health_decay() + self.annual_health_score_decay)
+            self.population.loc[self.population['alive'], 'health_score'] -= self._gompertz_health_decay(a=self.a, b=self.b, c=self.c) + self.annual_health_score_decay
+            self.population.loc[self.population['alive'], 'unshocked_health_score'] -= self._gompertz_health_decay(a=self.a, b=self.b, c=self.c) + self.annual_health_score_decay
         elif self.use_gompertz:
             # decay health_scores by gompertz distribution
             self.population.loc[self.population['alive'], 'health_score'] -= self._gompertz_health_decay() #  + self.annual_health_score_decay
@@ -257,7 +277,7 @@ class LvCHealthInequityModel(neworder.Model):
             if self.shock_probability_inversely_proportional_to_health_ability:
                 inverse_health_ability = 1 / shock_possible_pop.health_ability
                 shock_probability_by_individual = (inverse_health_ability - inverse_health_ability.mean() + 1).to_numpy()
-                vals = [shock['Shock Probability'] * shock_prob for shock_prob in shock_probability_by_individual]
+                vals = [shock['Shock Probability'] * shock_prob if (shock['Shock Probability'] * shock_prob) <= 1 else 1 for shock_prob in shock_probability_by_individual]
                 encountered = np.array([self.mc.hazard(val, 1)[0] if val > 0 else 0 for val in vals]).astype(bool)
             # scaling the shock probability for scenarios with unequal shock probability conditional on cirucmstance or effort or health ability
             elif self.shock_probability_conditional_on_health_ability:
@@ -308,9 +328,7 @@ class LvCHealthInequityModel(neworder.Model):
 
             #neworder.log(f"Individuals encountering shock {shock['cause']}: {encountered_shock.index}")
             # determine if they actually take a shock based on their health ability
-            if self.uniform_probability_of_taking_shock:
-                taken_shock = encountered_shock[0.5 <= np.random.random(len(encountered_shock))]
-            elif self.deterministic_shocks or self.deterministic_taken:
+            if self.deterministic_shocks or self.deterministic_taken:
                 # For the deterministic model I think the best approach to making this deterministic
                 # is to take the bottom % of the mean of health abilities in the encountered population
                 mean_health_ability = encountered_shock['health_ability'].mean()
@@ -353,7 +371,7 @@ class LvCHealthInequityModel(neworder.Model):
             # so that the highest shock magnitude gets applied to the individual with the lowest health score
             if self.deterministic_shocks or self.deterministic_magnitude:
                 shock_magnitudes = np.linspace(shock['Disability Weights'][0], shock['Disability Weights'][1], len(taken_shock))
-                taken_shock = taken_shock.sort_values(by='health_score', ascending=True)   
+                taken_shock = taken_shock.sort_values(by='health_score', ascending=False)   
             elif self.shock_magnitude_influenced_by_health_ability and len(taken_shock) > 1:
                 norm_uniform_magnitudes = min_max(shock_magnitudes)
                 # norm_health_abilities = lvc.utils.min_max(taken_shock.health_abilities.to_numpy())
@@ -371,12 +389,13 @@ class LvCHealthInequityModel(neworder.Model):
                 else:
                     magnitude = shock_magnitudes[positional_index]
 
-                if len(shock['cause']) > 1:
+                if len(self.shocks_taken_data[index_key]['shocks']) > 1:
                     self.shocks_taken_data[index_key]['shock_magnitudes'].append(1 - magnitude)
                     # apply shock using compounding rule (health_score - (1-weight1) - (1-weight1) * (1-weight2)) etc
                     # need to use unshocked health score (i.e., just decay) to correctly applying compounding
                     self.population.loc[index_key, 'health_score'] = self.population.loc[index_key, 'health_score'] - np.prod(self.shocks_taken_data[index_key]['shock_magnitudes'])
                 else:
+                    # Appending (1 - magnitude) since that is used for compounding
                     self.shocks_taken_data[index_key]['shock_magnitudes'].append(1 - magnitude)
                     self.population.loc[index_key, 'health_score'] -= magnitude
 
@@ -415,15 +434,14 @@ class LvCHealthInequityModel(neworder.Model):
         Returns: NoneType
         """
         model_mortality = self.population['age_of_death'].value_counts()
-        
+
         # Added the plus one to the number of years as this fixes a reshaping bug 
         # that occurs when everyone is dead before the end of the timeline
         for age in range(0, self.number_of_years + 1):
             if age not in model_mortality.index:
                 model_mortality.loc[age] = 0
 
-        model_mortality = model_mortality.reset_index(name='count')
-        model_mortality = model_mortality.rename(columns={'age_of_death': 'age'})
+        model_mortality = model_mortality.reset_index(name='count').rename(columns={'age_of_death': 'age'})
         model_mortality = model_mortality.sort_values('age', ascending=False).set_index('age').cumsum().iloc[::-1]
         model_mortality = model_mortality.rename(columns={'count': 'Model survivors at age x'}).reset_index()
         self.model_mortality = model_mortality
